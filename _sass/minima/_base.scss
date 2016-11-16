@@ -8,7 +8,13 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
+/**
+ * My change
+ */
+p {
+   text-align: justify;
+   text-justify: inter-word;
+}
 
 /**
  * Basic styling
