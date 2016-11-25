@@ -195,36 +195,29 @@ Pewną trudnością w programowaniu proceduralnym jest to, że dane, na których
 using System.IO;
 using System;
 
-class Program
+public class Program
 {
   static void Main()
   {
-    var calc = new SquaresSumCalculator(10);
-    var sum = calc.Calculate();
+    var calc = new SquaresSumCalculator();
+    var sum = calc.Calculate(10);
     Console.WriteLine(sum);
   }
 }
 
 public class SquaresSumCalculator
 {
-  private int n;
-
-  public SquaresSumCalculator(int n)
+  public int Calculate(int n)
   {
-    this.n = n;
+    return this.SquaresSum(n);
   }
 
-  public int Calculate()
-  {
-    return this.SquaresSum();
-  }
-
-  private int SquaresSum()
+  private int SquaresSum(int n)
   {
     int sum = 0;
-    for (int i = 1; i <= this.n; i++)
+    for (int i = 1; i <= n; i++)
     {
-      sum += Square(i);
+      sum += this.Square(i);
     }
 
     return sum;
