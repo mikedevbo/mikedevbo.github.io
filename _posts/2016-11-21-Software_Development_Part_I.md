@@ -266,7 +266,7 @@ sibilings(x, y).
 {% endhighlight %}
 
 ## Podsumowanie
-Z komputerem można "rozmawiać" na wiele sposobów, ale nawet bardzo dobra znajomość języków programowania oraz paradygmatów programowania nie wystarcza do tworzenia programów cechujących się dobrą jakością. W kolejnych seriach z cyklu "Wytwarzanie oprogramowania" zostaną opisane wybrane techniki pozwalające zbliżyć się do jakości akceptowalnej przez odbiorcę, bo przecież nie istnieją programy w 100% odporne na błędy, a może tak ;).
+Z komputerem można "rozmawiać" na wiele sposobów, ale sama znajomość języków programowania oraz paradygmatów programowania nie wystarcza do tworzenia złożonych programów cechujących się dobrą jakością. W kolejnych seriach z cyklu "Wytwarzanie oprogramowania" zostaną opisane wybrane techniki pozwalające zbliżyć się do jakości akceptowalnej przez odbiorcę, bo przecież nie istnieją programy w 100% odporne na błędy, a może tak ;).
 
 [1]: https://www.ii.uni.wroc.pl/~prz/200506/2006lato/cpp/zadania/sextium.pdf "Sextium II processor"
 [2]: https://gcc.gnu.org/wiki/GFortranStandards "Fortran language"
