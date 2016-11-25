@@ -197,7 +197,7 @@ using System;
 
 public class Program
 {
-  static void Main()
+  public static void Main()
   {
     var calc = new SquaresSumCalculator();
     var sum = calc.Calculate(10);
@@ -230,7 +230,7 @@ public class SquaresSumCalculator
 }
 {% endhighlight %}
 
-W metodzie `Main` jest tworzony obiekt `SquaresSumCalculator`, na którym to obiekcie wywoływana jest metoda `Calculate`. Metoda ta jest zadeklarowana jako publiczna w klasie `SquaresSumCalculator`. Pozostałe metody są oznaczone modyfikatorem dostępu `private`, który to modyfikator "zabrania" dostępu do tych metod fragmentom kodu innym niż te, które znajdują się w klasie `SquaresSumCalculator`. Jak widać na przykładzie w ramach implementacji klasy, wykorzystane jest programowanie proceduralne, ale mogłoby być użyte dowolne inne. "Na zewnątrz klasy" dostępna jest tylko metoda `Calculate`, a konsumer wywołujący tę metodę nie wie nic o szczegółach jej wewnętrznej implementacji.
+W metodzie `Main` jest tworzony obiekt `SquaresSumCalculator`, na którym to obiekcie wywoływana jest metoda `Calculate`. Metoda ta jest zadeklarowana jako publiczna w klasie `SquaresSumCalculator`. Pozostałe metody są oznaczone modyfikatorem dostępu `private`, który to modyfikator "zabrania" dostępu do tych metod fragmentom kodu innym niż te, które znajdują się w klasie `SquaresSumCalculator`. Jak widać na przykładzie w ramach implementacji klasy, wykorzystane jest programowanie proceduralne, ale mogłoby być użyte dowolne inne. "Na zewnątrz klasy" dostępna jest tylko metoda `Calculate`, a konsumer (klasa `Program`) wywołujący tę metodę nie wie nic o szczegółach jej wewnętrznej implementacji.
 
 ## Programowanie funkcyjne
 Równolegle z rozwojem paradygmatów bazujących na programowaniu imperatywnym rozwijała się koncepcja programowania funkcyjnego. W programowaniu imperatywnym główną koncepcją jest stan maszyny oraz zmiana tego stanu, natomiast w programowaniu funkcyjnym główną koncepcją jest funkcja oraz wyliczanie wyrażeń przez funkcje. Mówimy komputerowi bardziej, co ma zrobić, a nie, jak ma to zrobić. W większości przypadków języki funkcyjne są bardziej zwięzłe w konstrukcji od języków imperatywnych. Dla porównania przykład programu obliczającego sumę kwadratów liczb od 1 do n, zapisany w języku [F#][5], może wyglądać np. tak:
