@@ -9,6 +9,7 @@ Jest to pierwszy wpis z serii, którą nazwałem "Wytwarzanie oprogramowania". W
 Wpis ten zawiera krótki przegląd wybranych paradygmatów programowania.
 
 ## Programowanie niskopoziomowe
+
 ### Język maszynowy
 Z punktu widzenia komputera najbardziej przyjaznym językiem do komunikacji jest język składający się z dwóch znaków: 0 i 1. Jest to tak zwany język maszynowy. "Rozmowa" z komputerem w tym języku odbywa się poprzez wprowadzanie rozkazów reprezentowanych przez ciągi zer i jedynek. Każdy komputer posiada jednostkę zwaną procesorem, a każdy rodzaj procesora posiada swoją interpretację języka maszynowego. Dla przykładu, poniższy kod reprezentuje język maszynowy zrozumiały dla procesora [Sextium II][1]. "Rozkazuje" on komputerowi wczytanie dwóch liczb ze standardowego wejścia, dodanie ich do siebie oraz wypisanie wyniku na standardowe wyjście:
 
@@ -88,6 +89,7 @@ adres zawartość słowa   opis zawartości słowa
 
 ## Języki wysokiego poziomu
 Asembler pozwala komunikować się z komputerem w dużo bardziej przyjazny sposób niż ciągi zer i jedynek, umożliwiając pisanie bardziej zaawansowanych programów. Jednak nadal jest to język dość trudny, zwłaszcza, jeśli chodzi o analizę kodu lub jego modyfikację. Między innymi z tego powodu następnym krokiem w rozwoju języków programowania było powstanie tak zwanych języków wysokiego poziomu. Języki te umożliwiają porozumiewanie się z komputerem w jeszcze bardziej przyjazny sposób, uwalniając programistę od konieczności znajomości konkretnej architektury procesora. Kod napisany w języku wysokiego poziomu jest tłumaczony na język Asemblera (lub bezpośrednio na język maszynowy) w tak zwanym procesie kompilacji. Jednym z pierwszych stworzonych języków z tej kategorii jest język o nazwie [Fortran][2]. Niektóre jego cechy to:
+
 * deklaracje zmiennych
 * definiowanie procedur
 * operatory logiczne
@@ -104,7 +106,7 @@ PRINT * ,'wynik',x+y
 END
 {% endhighlight %}
 
-## Programowanie imperatywne
+### Programowanie imperatywne
 Dzięki językom wysokiego poziomu komunikacja z komputerem została mocno uproszczona w stosunku do języka Asemblera, przez co analiza programów oraz ich modyfikacja jest dużo prostsza i mniej podatna na błędy. Na bazie takiego poziomu abstrakcji, powstały różnego rodzaju paradygmaty (lub metodyki) programowania. Jednym z takich paradygmatów jest tzw. programowanie imperatywne, które charakteryzuje się tym, że program reprezentowany jest w postaci stanu maszyny, który zmieniany jest przez ciąg instrukcji. Innymi słowy, programując imperatywnie mówimy komputerowi jak ma rozwiązać dany problem. Przykładowo, poniższy kod napisany w języku [C][3] oblicza sumę kwadratów liczb od 1 do n:
 
 {% highlight c %}
@@ -132,8 +134,9 @@ int main()
 }
 {% endhighlight %}
 
-## Programowanie strukturalne
+### Programowanie strukturalne
 Patrząc na powyższy przykład, można zauważyć, że wykorzystuje on tak zwaną instrukcję skoku `goto`. Instrukcja ta nakazuje komputerowi, przy spełnieniu odpowiednich warunków,  przejście do odpowiedniej części programu i kontynowanie wykonywania programu od tego miejsca. Takie "skakanie" bardzo utrudnia analizę kodu. Paradygmat programowania strukturalnego ogranicza używanie instrukcji skoku oraz definiuje strukturę kodu. Kod taki powinien składać się z kilku dobrze zdefiniowanych instrukcji:
+
 * sekwencja – wykonanie instrukcji jedna po drugiej
 * wybór – if-then-else
 * iteracja – for, while
@@ -156,7 +159,7 @@ int main()
 }
 {% endhighlight %}
 
-## Programowanie proceduralne
+### Programowanie proceduralne
 Głównym założeniem tego paradygmatu jest to, aby kod dzielić na mniejsze kawałki, wykonujące jasno określone operacje. Większość języków wysokiego poziomu (a może wszystkie ;)) dostarczają konstrukcję zwaną procedurą. W procedurach można zakodować poszczególne fragmenty programu tak, aby odseparować je od reszty, a także móc je wykorzystać w innych miejscach. Przykład w języku C, podziału na procedury (`main(...), squaresSum(...), square(...)`) powyższego programu może wyglądać np. tak:
 
 {% highlight c %}
@@ -188,7 +191,7 @@ int square(int i)
 }
 {% endhighlight %}
 
-## Programowanie obiektowe
+### Programowanie obiektowe
 Pewną trudnością w programowaniu proceduralnym jest to, że dane, na których operują procedury nie są ze sobą powiązane. Dotyczy to zwłaszcza zadeklarowanych zmiennych globalnych, do których można mieć dostęp z dowolnego fragmentu kodu. Ponieważ główną koncepcją programowania imperatywnego, a co za tym idzie również programowania proceduralnego, jest zmiana stanu maszyny, a stan ten może być zmieniany w dowolnym fragmencie kodu, może prowadzić to do powstawania błędów w programie, poprzez nieprawidłowe ustawienie tego stanu. Aby zminimalizować takie operacje, powstały tzw. języki obiektowe, a co za tym idzie również paradygmat programowania obiektowego. Głównym założeniem tego paradygmatu jest to, aby dane oraz procedury, które operują na tych danych, były ze sobą powiązane w takim sensie, aby zmiany na tych danych mogły dokonywać tylko te jasno określone procedury. W większości języków obiektowych konstrukcja do budowy takich powiązań nazywa się klasą (`class`), a instancję konkretnej klasy nazywa się obiektem (`object`). Procedury operujące na danych obiektu nazywa się metodami (`method`). Przykład programu w języku [C#][4], obliczającego sumę kwadratów liczb od 1 do n może wyglądać np. tak:
 
 {% highlight csharp %}
@@ -232,7 +235,7 @@ public class SquaresSumCalculator
 
 W metodzie `Main` jest tworzony obiekt `SquaresSumCalculator`, na którym to obiekcie wywoływana jest metoda `Calculate`. Metoda ta jest zadeklarowana jako publiczna w klasie `SquaresSumCalculator`. Pozostałe metody są oznaczone modyfikatorem dostępu `private`, który to modyfikator "zabrania" dostępu do tych metod fragmentom kodu innym niż te, które znajdują się w klasie `SquaresSumCalculator`. Jak widać na przykładzie w ramach implementacji klasy, wykorzystane jest programowanie proceduralne, ale mogłoby być użyte dowolne inne. "Na zewnątrz klasy" dostępna jest tylko metoda `Calculate`, a konsumer (klasa `Program`) wywołujący tę metodę nie wie nic o szczegółach jej wewnętrznej implementacji.
 
-## Programowanie funkcyjne
+### Programowanie funkcyjne
 Równolegle z rozwojem paradygmatów bazujących na programowaniu imperatywnym rozwijała się koncepcja programowania funkcyjnego. W programowaniu imperatywnym główną koncepcją jest stan maszyny oraz zmiana tego stanu, natomiast w programowaniu funkcyjnym główną koncepcją jest funkcja oraz wyliczanie wyrażeń przez funkcje. Mówimy komputerowi bardziej, co ma zrobić, a nie, jak ma to zrobić. W większości przypadków języki funkcyjne są bardziej zwięzłe w konstrukcji od języków imperatywnych. Dla porównania przykład programu obliczającego sumę kwadratów liczb od 1 do n, zapisany w języku [F#][5], może wyglądać np. tak:
 
 {% highlight ocaml %}
@@ -248,7 +251,7 @@ let sum = squaresSum 10
 printfn "%i" sum
 {% endhighlight %}
 
-## Programowanie logiczne
+### Programowanie logiczne
 Jeszcze innym paradygmatem jest tzw. programowanie logiczne, gdzie program reprezentowany jest przez  zapis stwierdzeń rachunku predykatów pierwszego rzędu, a wyniki programu jako rezultat automatycznego wnioskowania z tych stwierdzeń. Przykład programu stwierdzającego relację rodzeństwa w języku [Prolog][6]:
 
 {% highlight prolog %}
