@@ -1,8 +1,13 @@
 ---
 layout: post
 title:  "Wytwarzanie oprogramowania I - paradygmaty programowania"
-date:   2016-11-26 08:00:00 +0100
+date:   2016-11-26
 ---
+
+Posty z tej serii:
+
+* [Wytwarzanie oprogramowania I - paradygmaty programowania]({% post_url 2016-11-26-wytwarzanie_oprogramowania_I %})
+* [Wytwarzanie oprogramowania II - techniki programowania]({% post_url 2017-02-25-wytwarzanie_oprogramowania_II %})
 
 Jest to pierwszy wpis z serii, którą nazwałem "Wytwarzanie oprogramowania". W serii tej, przedstawię elementy, które pomagają mi zrozumieć, czym jest programowanie, a także elementy, które pomogły\pomagają mi w codziennej pracy, od momentu kiedy byłem młodszym programistą do teraz, kiedy jestem trochę starszym programistą ;).
 
