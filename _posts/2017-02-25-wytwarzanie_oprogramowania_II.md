@@ -7,6 +7,7 @@ Posty z tej serii:
 
 * [Wytwarzanie oprogramowania I - paradygmaty programowania]({% post_url 2016-11-26-wytwarzanie_oprogramowania_I %})
 * [Wytwarzanie oprogramowania II - techniki programowania]({% post_url 2017-02-25-wytwarzanie_oprogramowania_II %})
+* [Wytwarzanie oprogramowania III - architektury systemów informatycznych]({% post_url 2017-03-14-wytwarzanie_oprogramowania_III %})
 
 Drugi wpis z serii „Wytwarzanie oprogramowania” zawiera przegląd wybranych technik programistycznych pozwalających dostarczać ciut lepszej jakości programy. Wszystkie przykłady napisane są w języku `C#` i dotyczą paradygmatu programowania obiektowego.
 
