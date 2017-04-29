@@ -114,7 +114,7 @@ public class Handler : IHandleMessages<InviteForTennisMatch>
 
 NServiceBus jest krokiem naprzód w procesie wytwarzania oprogramowania. Umożliwia budowanie bardziej niezawodnych systemów. Daje programistom czas i spokój w momencie kiedy jest on najbardziej potrzebny, czyli w sytuacji gdy występują problemy w krytycznej części systemu. Użytkownikom umożliwia zaś kontynuowanie pracy, kiedy takie problemy występują. Oczywiście nie jest on lekiem na wszystkie bolączki. W niektórych sytuacjach nie ma on zastosowania, w innych wymaga przeprojektowania rozwiązania, a w jeszcze innych przeszkolenia i zmiany sposobu podejścia do używania systemów przez końcowych użytkowników. Gdy jednak uda się te wyzwania przezwyciężyć i gdy spotka nas krytyczna sytuacja, nie ma lepszego uczucia niż **"no widzę, że lecą błędy, coś nie gra, poprawię to na spokojnie i przywrócę wiadomości z kolejki z błędami - nie blokuję użytkowników a ich dotychczasowe wysłane dane nie przepadły"**
 
-Podsumowując całą serię można rzec: od kodu maszynowego, przez techniki i wzorce projektowe do messaging'u. Wszystko te klocki złożone razem dają niezłe efekty i dużo frajdy w procesie wytwarzania oprogramowania.
+Podsumowując całą serię można rzec: od kodu maszynowego, przez techniki programowania, wzorce projektowe i architektury do messaging'u. Wszystko te klocki złożone razem dają niezłe efekty i dużo frajdy w procesie wytwarzania oprogramowania.
 Warto zawsze pamiętać aby ze zbioru wielu możliwych języków, framework'ów, bibliotek, architektur i innych czynników, dobierać te, które pozwolą nam na realizację oprogramowania zgodnego z oczekiwaniami klienta.
 
 [1]: http://udidahan.com/ "Udi Dahan"
