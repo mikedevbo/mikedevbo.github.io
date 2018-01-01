@@ -142,7 +142,7 @@ int main()
 {% endhighlight %}
 
 ### Programowanie strukturalne
-Patrząc na powyższy przykład, można zauważyć, że wykorzystuje on tak zwaną instrukcję skoku `goto`. Instrukcja ta nakazuje komputerowi, przy spełnieniu odpowiednich warunków,  przejście do odpowiedniej części programu i kontynowanie wykonywania programu od tego miejsca. Takie "skakanie" bardzo utrudnia analizę kodu. Paradygmat programowania strukturalnego ogranicza używanie instrukcji skoku oraz definiuje strukturę kodu. Kod taki powinien składać się z kilku dobrze zdefiniowanych instrukcji:
+Patrząc na powyższy przykład, można zauważyć, że wykorzystuje on tak zwaną instrukcję skoku `goto`. Instrukcja ta nakazuje komputerowi, przy spełnieniu odpowiednich warunków,  przejście do odpowiedniej części programu i kontynuowanie wykonywania programu od tego miejsca. Takie "skakanie" bardzo utrudnia analizę kodu. Paradygmat programowania strukturalnego ogranicza używanie instrukcji skoku oraz definiuje strukturę kodu. Kod taki powinien składać się z kilku dobrze zdefiniowanych instrukcji:
 
 * sekwencja – wykonanie instrukcji jedna po drugiej
 * wybór – if-then-else
