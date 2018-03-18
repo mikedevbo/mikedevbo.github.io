@@ -4,6 +4,11 @@ title:  "System komentarzy do bloga I - Design"
 date:   2018-03-11
 ---
 
+Posty z tej serii:
+
+* [System komentarzy do bloga I - Design]({% post_url 2018-03-11-blog_comments_I_Design %})
+* [System komentarzy do bloga II - Develop]({% post_url 2018-03-18-blog_comments_II_Develop %})
+
 W poście [Wytwarzanie oprogramowania IV]({% post_url 2017-04-29-wytwarzanie_oprogramowania_IV %}), na przykładzie [NServiceBus'a][1], widzieliśmy jak Messaging and Queueing stawia krok do przodu w kierunku polepszenia jakości realizowanych systemów. Ten post otwiera serię pokazującą jak za pomocą tej samej techniki zrealizować system dodawania komentarzy do bloga. Trzy główne wątki tego posta to: **Idea**, **User Stories** oraz **Design** rozwiązania.
 
 ## Idea
