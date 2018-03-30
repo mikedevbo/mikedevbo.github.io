@@ -8,6 +8,7 @@ Posty z tej serii:
 
 * [System komentarzy do bloga I - Design]({% post_url 2018-03-11-blog_comments_I_Design %})
 * [System komentarzy do bloga II - Develop]({% post_url 2018-03-18-blog_comments_II_Develop %})
+* [System komentarzy do bloga III - Test]({% post_url 2018-03-30-blog_comments_III_Test %})
 
 W [pierwszej części]({% post_url 2018-03-11-blog_comments_I_Design %}) serii widzieliśmy przykładowy projekt rozwiązania dla systemu komentarzy do bloga. W tym poście skupimy się na wybranych fragmentach implementacji poszczególnych komponentów. Całość można zobaczyć na [GitHub'e][1]. 
 
