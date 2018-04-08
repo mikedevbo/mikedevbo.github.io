@@ -107,8 +107,8 @@ private TestableMessageHandlerContext GetContext()
 Jest to proste opakowanie klasy `TestableMessageHandlerContext`, która jest częścią `NServiceBus.Testing`
 
 {% highlight csharp %}
-private TSentMessage GetSentMessage<TSentMessage>(TestableMessageHandlerContext context)
-    where TSentMessage : class
+private TSentMessage GetSentMessage<TSentMessage>(
+    TestableMessageHandlerContext context) where TSentMessage : class
 {
     return context.SentMessages[0].Message as TSentMessage;
 }
@@ -130,12 +130,18 @@ public async Task GetCommentResponseStatus_Input_ExpectedResult(
 {
     // Arrange
     const string etagResult = "1234";
-    Func<Task<(bool result, string etag)>> f1 = () => Task.Run(() => (isPullRequestOpen, etagResult));
-    Func<Task<bool>> f2 = () => Task.Run(() => isPullRequestMerged);
+    
+    Func<Task<(bool result, string etag)>> f1 = () => 
+        Task.Run(() => (isPullRequestOpen, etagResult));
+    
+    Func<Task<bool>> f2 = () => 
+        Task.Run(() => isPullRequestMerged);
+    
     var handler = this.GetHandler();
 
     // Act
-    var result = await handler.GetCommentResponseStatus(f1, f2).ConfigureAwait(false);
+    var result = await handler.GetCommentResponseStatus(f1, f2)
+        .ConfigureAwait(false);
 
     // Assert
     Assert.That(result.ResponseStatus, Is.EqualTo(expectedResult));
@@ -191,7 +197,9 @@ public async Task Post_ForCommentData_NoException()
         BaseAddress = new Uri("http://someTestUrl/")
     };
 
-    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+    client.DefaultRequestHeaders
+          .Accept
+          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
     var comment = new Comment
     {
@@ -204,11 +212,14 @@ public async Task Post_ForCommentData_NoException()
 
     var serializer = new JavaScriptSerializer();
     var json = serializer.Serialize(comment);
-    var stringContent = new StringContent(json, Encoding.UTF8, "application/json");
+    var stringContent = new StringContent(
+        json,
+        Encoding.UTF8,
+        "application/json");
 
     // Act
-    HttpResponseMessage response = await client.PostAsync("comment", stringContent)
-        .ConfigureAwait(false);
+    HttpResponseMessage response = 
+        await client.PostAsync("comment", stringContent).ConfigureAwait(false);
 
     // Assert
     try
