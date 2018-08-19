@@ -15,7 +15,7 @@ W czwartej i ostatniej części serii pokazującej w jaki sposób można wykorzy
 
 ## Proces
 
-Podobnie jak przy projektowaniu lub programowaniu, sposobów na wdrożenie jest wiele. Narzędzi wspomagających wdrożenie również jest wiele. Wszystko zależy od fizycznej architektury rozwiązania, ilości komponentów do wdrożenia, docelowego miejsca gdzie komponenty będą hostowane, idt. Niezależnie od tego jakie rozwiązanie się wybierze, wszystkie kroki związane z wdrożeniem powinny być w maksymalnie możliwy sosób zautomatyzowane, tak aby zminimalizować możliwość popełnienia błędu. Jest to jedna z zasad tzw. [Continuous Integration software development practice][1]. Proces wdrożenia systemu komentarzy do bloga może wyglądać np. tak:
+Podobnie jak przy projektowaniu lub programowaniu, sposobów na wdrożenie jest wiele. Narzędzi wspomagających wdrożenie również jest wiele. Wszystko zależy od fizycznej architektury rozwiązania, ilości komponentów do wdrożenia, docelowego miejsca gdzie komponenty będą hostowane, idt. Niezależnie od tego jakie rozwiązanie się wybierze, wszystkie kroki związane z wdrożeniem powinny być w maksymalnie możliwy sposób zautomatyzowane, tak aby zminimalizować możliwość popełnienia błędu. Jest to jedna z zasad tzw. [Continuous Integration software development practice][1]. Proces wdrożenia systemu komentarzy do bloga może wyglądać np. tak:
 
 ![Picutre1]({{ site.url }}/assets/blog_comments_deploy/deploy_process.png)
 
@@ -32,7 +32,7 @@ Patrząc na powyższy diagram możemy wyodrębnić dwa rodzaje automatyzacji:
     * Test
     * Production
 
-Druga część automatyzacji zależy od tego czy będziemy trzymać się zasad zdefiniowanych wg tzw. **Continuous Delivery** czy też zasad zdefiniowanych wg. tzw. **Continuous Deployment**. Więcej szczegółów o różnicach między tymi podejściami można przeczytać [w tym artykule][2].
+Druga część automatyzacji zależy od tego czy będziemy trzymać się zasad zdefiniowanych wg tzw. **Continuous Delivery** czy też zasad zdefiniowanych wg tzw. **Continuous Deployment**. Więcej szczegółów o różnicach między tymi podejściami można przeczytać [w tym artykule][2].
 
 O ile pierwsza część automatyzacji jest raczej stała o tyle druga część może się zmieniać w zależności od tego w którą stronę dany produkt będzie ewaluował. W dalszej części artykułu skupimy się na części pierwszej.
 
@@ -50,7 +50,7 @@ Patrząc na architekturę z punktu widzenia logicznego Nancy host wysyła messag
 
 ## Build
 
-Zanim wdrożymy stworzone funkcjonalności chcemy wyeliminować tzw. efekt "u mnie działa" jeśli chodzi o kompilację kodu oraz rezultat unit testów. Pierwszym krokiem w procesie wdrożenia jest tzw. **Build**, którego zadaniem jest pobranie kodu z systemu kontroli wersji, skompilowanie w celu sprawdzenia czy kod jest kompletny oraz uruchomienie unit testów. Build może zawierać również inne kroki np. sprawdzanie pokrycia kodu testami jednostkowymi, zgodność kodu z regułami jego formatowania, itd. Przydatnym elementem jest oznaczanie wdrażanych artefaktów numerem wskazującym z którego commit'a z systemu kontroli wersji nastąpiło wdrożenie. Jeśli kod trzymamy na [GitHub'e][4] to możemy tworzyć tzw. [Release'y][5] oznaczając je np. wg konwencji [Semantic Versioning][6]. Następnie skorzystać z narzędzia [GitVersion][7], które oznacza artefakty numerem zdefiniowanego GitHub Release'a. Do zautomatyzowania procesu Build'owania można wykorzystać różnego rodzaju [narzędzia lub systemy][8]. W dalszej części artykułu zobaczymy jak wykorzystać narzędzie oraz język skryptowy [PowerShell][9] do zautomatyzowania zarówno Build'a jak Deploy'a stworzonych funkcjonalności.
+Zanim wdrożymy stworzone funkcjonalności chcemy wyeliminować tzw. efekt "u mnie działa" jeśli chodzi o kompilację kodu oraz rezultat Unit Testów. Pierwszym krokiem w procesie wdrożenia jest tzw. **Build**, którego zadaniem jest pobranie kodu z systemu kontroli wersji, skompilowanie w celu sprawdzenia czy kod jest kompletny oraz uruchomienie unit testów. Build może zawierać również inne kroki np. sprawdzanie pokrycia kodu testami jednostkowymi, zgodność kodu z regułami jego formatowania, itd. Przydatnym elementem jest oznaczanie wdrażanych artefaktów numerem wskazującym z którego commit'a z systemu kontroli wersji nastąpiło wdrożenie. Jeśli kod trzymamy na [GitHub'e][4] to możemy tworzyć tzw. [Release'y][5] oznaczając je np. wg konwencji [Semantic Versioning][6]. Następnie skorzystać z narzędzia [GitVersion][7], które oznacza artefakty numerem zdefiniowanego GitHub Release'a. Do zautomatyzowania procesu Build'owania można wykorzystać różnego rodzaju [narzędzia lub systemy][8]. W dalszej części artykułu zobaczymy jak wykorzystać narzędzie oraz język skryptowy [PowerShell][9] do zautomatyzowania zarówno Build'a jak Deploy'a stworzonych funkcjonalności.
 
 W pierwszej kolejności zobaczmy przykładowy skrypt, który pobiera kod z GitHub'a oraz go kompiluje.
 
@@ -123,7 +123,7 @@ Skrypt przyjmuje następujące parametry wejściowe:
 * **$solutionRelativePath** - ścieżka do pliku *.sln do skompilowania (względem $buildArtifactsPath)
 * **$binRelativePath** - ścieżka do skompilowanego kodu (względem $buildArtifactsPath)
 
-W pierwszej kolejności czyszczony jest katalog na artefakty. Następnie z GitHub'a pobierany jest kod. Kolejne dwa kroki to pobranie paczek nuget'owych oraz kompilacja kodu. Ostatecznie skompilowany kod trafia do katalogu bin skąd można go dalej procesować. Wynik kompilacji zapisywany do pliku log'a zdefiniowanego przez zmienną $buildLogFile. Zapisując powyższy skrypt do pliku build.ps1 można go uruchomić np. tak
+W pierwszej kolejności czyszczony jest katalog na artefakty. Następnie z GitHub'a pobierany jest kod. Kolejne dwa kroki to pobranie paczek **nuget'owych** oraz kompilacja kodu. Ostatecznie skompilowany kod trafia do katalogu **bin** skąd można go dalej procesować. Wynik kompilacji zapisywany jest do pliku log'a zdefiniowanego przez zmienną **$buildLogFile**. Zapisując powyższy skrypt do pliku **build.ps1** można go uruchomić np. tak
 
 {% highlight powershell %}
 $runScript = "C:\build.ps1"
@@ -138,7 +138,7 @@ $binRelativePath = "src\bin"
 & $runScript $gitExePath $nugetExePath $msbuildExePath $buildArtifactsPath $gitRepositoryUrl $solutionRelativePath $binRelativePath
 {% endhighlight %}
 
-Zapisując powyższy skrypt do pliku run_build.ps1 można go uruchomić z konsoli PowerShell jednym poleceniem. W ten sposób mamy zautomatyzowany proces kompilacji kodu.
+Zapisując powyższy skrypt do pliku **run_build.ps1** można go uruchomić z konsoli PowerShell jednym poleceniem. W ten sposób mamy zautomatyzowany proces kompilacji kodu.
 
 Zobaczmy teraz w jaki sposób można uruchomić Unit Testy.
 
@@ -171,7 +171,7 @@ Skrypt przyjmuje następujące parametry wejściowe:
 * **$nunitExePath** - ścieżka do nunit3-console.exe
 * **$binPath** - ścieżka do skompilowanego kodu
 
-Skrypt zawiera dwa kroki. Pierwszy krok wyszukuje wszystkie pliki mające końcówkę *unit.tests.dll. Są to dll'ki zawierające Unit Testy. Drugi krok to uruchomienie testów i wypisanie wyniku na standardowe wyjście. Zapisując powyższy skrypt do pliku run_unit_tests.ps1 można go uruchomić np. tak:
+Skrypt zawiera dwa kroki. Pierwszy krok wyszukuje wszystkie pliki mające końcówkę ***unit.tests.dll**. Są to dll'ki zawierające Unit Testy. Drugi krok to uruchomienie testów i wypisanie wyniku na standardowe wyjście. Zapisując powyższy skrypt do pliku **run_unit_tests.ps1** można go uruchomić np. tak:
 
 {% highlight powershell %}
 $runScript = "C:\run_unit_tests.ps1"
@@ -181,7 +181,7 @@ $binPath = "C:\deploy\blog-comments\build_artifacts"
 & $runScript $nunitExePath $binPath
 {% endhighlight %}
 
-Podobnie jak dla kompilacji kodu, zapisując powyższy skrypt do pliku run_unittests.ps1 można go uruchomić z konsoli PowerShell jednym poleceniem. W ten sposób mamy zautomatyzowany proces uruchamiania testów jednostkowych.
+Podobnie jak dla kompilacji kodu, zapisując powyższy skrypt do pliku **run_unittests.ps1** można go uruchomić z konsoli PowerShell jednym poleceniem. W ten sposób mamy zautomatyzowany proces uruchamiania testów jednostkowych.
 
 Jeśli kompilacja kodu oraz wynik testów jednostkowych zakończą się sukcesem można przejść do procesu wdrożenia artefaktów.
 
@@ -266,22 +266,22 @@ Mając zdefiniowaną strukturę katalogów na Web Host'e najlepiej jest utworzy�
 
 * test
     * web
-        * wwwroot - katalog z taką samą strukturą jak na Web Host'e
-            * blue
-            * green
-            * web.config
-        * connectionstrings - katalog z plikiem konfiguracyjnym ścieżki do bazy danych
-        * nservicebus - katalog z plikiem licencji NServiceBus'a
-        * settings - katalog z plikami appsettings.config, log4net.config, web.config
+        * **wwwroot** - katalog z taką samą strukturą jak na Web Host'e
+            * **blue**
+            * **green**
+            * **web.config**
+        * **connectionstrings** - katalog z plikiem konfiguracyjnym ścieżki do bazy danych
+        * **nservicebus** - katalog z plikiem licencji NServiceBus'a
+        * **settings** - katalog z plikami appsettings.config, log4net.config, web.config
 * production
     * web
-        * wwwroot
-            * blue
-            * green 
-            * web.config
-        * connectionstrings
-        * nservicebus
-        * settings       
+        * **wwwroot**
+            * **blue**
+            * **green**
+            * **web.config**
+        * **connectionstrings**
+        * **nservicebus**
+        * **settings**       
 
 Proces wdrożenia nowej wersji w opcji blue na środowisko testowe może wyglądać np. tak:
 
@@ -475,15 +475,15 @@ catch
 }
 {% endhighlight %}
 
-Ponieważ skrypt jest dość długi popatrzmy na jego bazową strukturę zostawiając szczegóły do samodzielnej analizy. Parametry wejściowe skryptu są tak opisane aby w miarę łatwy sposób można było się domyśleć co znaczą. I tak np. parametr $nserviceBusLicenseSourcePath wskazuję ścieżkę z której będzie przekopiowany plik z licencją NServiceBus'a. Parametr $ftpHostName oznacza nazwę hosta FTP gdzie będą kopiowane artefakty itd. Kolejnym widocznym element jest podział kodu na mniejsze części a następnie złożenie go w jedną całość. Mniejsze kawałki to funkcje zawierające parametry wejściowe, realizujące określoną funkcjonalność:
+Ponieważ skrypt jest dość długi popatrzmy na jego bazową strukturę zostawiając szczegóły do samodzielnej analizy. Parametry wejściowe skryptu są tak opisane aby w miarę łatwy sposób można było się domyśleć co znaczą. I tak np. parametr **$nserviceBusLicenseSourcePath** wskazuję ścieżkę z której będzie przekopiowany plik z licencją NServiceBus'a. Parametr **$ftpHostName** oznacza nazwę hosta FTP gdzie będą kopiowane artefakty itd. Kolejnym widocznym element jest podział kodu na mniejsze części a następnie złożenie go w jedną całość. Mniejsze kawałki to funkcje zawierające parametry wejściowe, realizujące określoną funkcjonalność:
 
-* prepareArtifactsToDeploy - funkcja realizująca kroki od 1. do 4. proces wdrożenia
-* ftpCleanDestination - funkcja realizująca krok nr 5.
-* ftpCopyFiles - funkcja realizująca kroki 6. i 9.
-* warmUpUri - funkcja realizująca kroki 7. i 10.
-* setMainWebConfig - funkcja realizująca krok nr 8
+* **prepareArtifactsToDeploy** - funkcja realizująca kroki od 1. do 4. proces wdrożenia
+* **ftpCleanDestination** - funkcja realizująca krok nr 5.
+* **ftpCopyFiles** - funkcja realizująca kroki 6. i 9.
+* **warmUpUri** - funkcja realizująca kroki 7. i 10.
+* **setMainWebConfig** - funkcja realizująca krok nr 8
 
-Wykonanie skryptu zaczyna się po komentarzu #main gdzie wywoływane są poszczególne funkcje. Do operacji na protokole FTP została wykorzystana biblioteka [WinSCP][16]. Skrypt można zapisać np. w pliku web_deploy.ps1.
+Wykonanie skryptu zaczyna się po komentarzu **#main** gdzie wywoływane są poszczególne funkcje. Do operacji na protokole FTP została wykorzystana biblioteka [WinSCP][16]. Skrypt można zapisać np. w pliku **web_deploy.ps1**.
 
 ### Deploy - skrypt PowerShell - wywołanie
 
@@ -510,12 +510,12 @@ $mainUrlToWarmUp = "http://testcomments.[domainname].pl"
 & $runScript $destinationPath $sourcePath $nserviceBusLicenseSourcePath $settingsSourcePath $connectionstringsSourcePath $ftpHostName $ftpUserName $ftpPassword $ftpDestinationPath $winscpDllPath $UrlToWarmUp $mainWebConfigFilePath $urlRedirect $ftpMainWebConfigDestinationPath $mainUrlToWarmUp
 {% endhighlight %}
 
-Powyższe parametry można dostosowywać w zależności od tego którą opcję  i na jakie środowisko wdrażamy nową wersję. Zapisując poszczególne konfiguracje do osobnych plików *.ps1 możemy jednym wywołaniem w konsoli PowerShell wdrożyć nową wersję:
+Powyższe parametry można dostosowywać w zależności od tego którą opcję  i na jakie środowisko wdrażamy nową wersję. Zapisując poszczególne konfiguracje do osobnych plików ***.ps1** możemy jednym wywołaniem w konsoli PowerShell wdrożyć nową wersję:
 
-* run_blue_web_deploy_test.ps1 - wersja blue na środowisko testowe
-* run_green_web_deploy_test.ps1 - wersja green na środowisko testowe
-* run_blue_web_deploy_production.ps1 - wersja blue na środowisko produkcyjne
-* run_blue_web_deploy_production.ps1 - wersja green na środowisko produkcyjne
+* **run_blue_web_deploy_test.ps1** - wersja blue na środowisko testowe
+* **run_green_web_deploy_test.ps1** - wersja green na środowisko testowe
+* **run_blue_web_deploy_production.ps1** - wersja blue na środowisko produkcyjne
+* **run_blue_web_deploy_production.ps1** - wersja green na środowisko produkcyjne
 
 ## NServiceBus Host Deploy
 
@@ -531,9 +531,9 @@ Sytuacja jest analogiczna jak w przypadku Nancy Host'a. Cały proces wdrożenia 
 
 Struktura katalogów na artefakty, które będą instalowane jako Usługa Windows, powinna być taka sama zarówno na środowisku testowym jak i na produkcyjnym. Może wyglądać np. tak:
 
-* blog-comments - odpowiednik katalogu wwwroot dla Nancy Host'a
-    * blue
-    * green
+* **blog-comments** - odpowiednik katalogu wwwroot dla Nancy Host'a
+    * **blue**
+    * **green**
 
 Nowe wersje będą wdrażane, na zmianę, raz do katalogu blue a raz do katalogu green:
 
@@ -553,9 +553,9 @@ Powrót do poprzedniej wersji również się upraszcza i polega na zatrzymaniu n
 
 Mając pełny dostęp do maszyny wirtualnej możemy uruchomić skrypt wdrożeniowy bezpośrednio na niej kopiując artefakty bezpośrednio do katalogu z którego będzie instalowana Usługa Windows. Wcześniej można przygotować strukturę katalogów dla plików konfiguracyjnych
 
-* host
-    * connectionstrings - katalog z plikiem konfiguracyjnym ścieżki do bazy danych
-    * settings - katalog z plikami appsettings.config, log4net.config, web.config
+* **host**
+    * **connectionstrings** - katalog z plikiem konfiguracyjnym ścieżki do bazy danych
+    * **settings** - katalog z plikami appsettings.config, log4net.config, web.config
 
 Proces wdrożenia nowej wersji w opcji blue na środowisko testowe może wyglądać np. tak:
 
@@ -678,11 +678,11 @@ catch
 
 Skrypt również został podzielony na mniejsze kawałki za pomocą funkcji:
 
-* prepareArtifactsToDeploy - funkcja realizująca kroki od 1 do 3 procesu
-* windowsServiceExists - funkcja realizująca krok nr 5
-* stopWindowService - funkcja realizująca krok nr 4
+* **prepareArtifactsToDeploy** - funkcja realizująca kroki od 1 do 3 procesu
+* **windowsServiceExists** - funkcja realizująca krok nr 5
+* **stopWindowService** - funkcja realizująca krok nr 4
 
-Wykonanie skryptu zaczyna się po komentarzu #main gdzie wywoływane są poszczególne funkcje. Ostatnim elementem skryptu jest wykonanie kroku nr 6 procesu. Skrypt można zapisać np. w pliku host_deploy.ps1.
+Wykonanie skryptu zaczyna się po komentarzu **#main** gdzie wywoływane są poszczególne funkcje. Ostatnim elementem skryptu jest wykonanie kroku nr 6 procesu. Skrypt można zapisać np. w pliku **host_deploy.ps1**.
 
 ### Deploy - skrypt PowerShell - wywołanie
 
@@ -702,12 +702,12 @@ $windowsServiceBinPath = "C:\applications\blog-comments\test\blue\Host.exe"
 & $runScript $destinationPath $sourcePath $settingsSourcePath $connectionstringsSourcePath $previousWindowsServiceName $newWindowsServiceName $newWindowsServiceDescription $windowsServiceBinPath
 {% endhighlight %}
 
-Powyższe parametry można dostosowywać w zależności od tego którą opcję i na jakie środowisko wdrażamy nową wersję. Zapisując poszczególne konfiguracje do osobnych plików *.ps1 możemy jednym wywołaniem w konsoli PowerShell wdrożyć nową wersję:
+Powyższe parametry można dostosowywać w zależności od tego którą opcję i na jakie środowisko wdrażamy nową wersję. Zapisując poszczególne konfiguracje do osobnych plików ***.ps1** możemy jednym wywołaniem w konsoli PowerShell wdrożyć nową wersję:
 
-* run_blue_host_deploy_test.ps1 - wersja blue na środowisko testowe
-* run_green_host_deploy_test.ps1 - wersja green na środowisko testowe
-* run_blue_host_deploy_production.ps1 - wersja blue na środowisko produkcyjne
-* run_blue_host_deploy_production.ps1 - wersja green na środowisko produkcyjne
+* **run_blue_host_deploy_test.ps1** - wersja blue na środowisko testowe
+* **run_green_host_deploy_test.ps1** - wersja green na środowisko testowe
+* **run_blue_host_deploy_production.ps1** - wersja blue na środowisko produkcyjne
+* **run_blue_host_deploy_production.ps1** - wersja green na środowisko produkcyjne
 
 ## Podsumowanie
 
