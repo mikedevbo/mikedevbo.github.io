@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "System komentarzy do bloga IV - Deploy"
-date:   2018-05-27
+date:   2018-08-19
 ---
 
 Posty z tej serii:
@@ -9,7 +9,7 @@ Posty z tej serii:
 * [System komentarzy do bloga I - Design]({% post_url 2018-03-11-blog_comments_I_Design %})
 * [System komentarzy do bloga II - Develop]({% post_url 2018-03-18-blog_comments_II_Develop %})
 * [System komentarzy do bloga III - Test]({% post_url 2018-03-30-blog_comments_III_Test %})
-* [System komentarzy do bloga IV - Deploy]({% post_url 2018-04-27-blog_comments_IV_Deploy %})
+* [System komentarzy do bloga IV - Deploy]({% post_url 2018-08-19-blog_comments_IV_Deploy %})
 
 W czwartej i ostatniej części serii pokazującej, w jaki sposób można wykorzystać Messaging and Queueing do realizacji systemu komentarzy na blogu, zobaczymy implementację wybranych elementów pozwalających wdrożyć stworzone funkcjonalności.
 

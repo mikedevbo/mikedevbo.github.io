@@ -9,7 +9,7 @@ Posty z tej serii:
 * [System komentarzy do bloga I - Design]({% post_url 2018-03-11-blog_comments_I_Design %})
 * [System komentarzy do bloga II - Develop]({% post_url 2018-03-18-blog_comments_II_Develop %})
 * [System komentarzy do bloga III - Test]({% post_url 2018-03-30-blog_comments_III_Test %})
-* [System komentarzy do bloga IV - Deploy]({% post_url 2018-04-27-blog_comments_IV_Deploy %})
+* [System komentarzy do bloga IV - Deploy]({% post_url 2018-08-19-blog_comments_IV_Deploy %})
 
 Jest to trzecia część cyklu na temat systemu komentarzy do bloga. W dwóch poprzednich częściach widzieliśmy projekt rozwiązania oraz jego poszczególne elementy implementacji. W tej części zobaczymy wybrane fragmenty implementacji testów.
 
