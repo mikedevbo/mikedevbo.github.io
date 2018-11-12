@@ -1,0 +1,61 @@
+<h2>Skomentuj...</h2>
+<p id='info'>
+  <noscript>
+    Aby dodać komentarz wymagana jest włączona obsługa JavaScript.
+  </noscript>
+</p>
+<p>
+  <input type="text" id="username" name="username" value="" size="22" tabindex="1" placeholder="Nazwa" />
+  <span><small>Wymagana</small></span>
+</p>
+<p>
+  <input type="text" id="useremail" name="useremail" value="" size="22" tabindex="2" placeholder="Email" />
+  <span><small>Jeśli chcesz otrzymać info o odpowiedzi</small></span>
+</p>
+<p><input type="text" id="userwebsite" name="userwebsite" value="" size="22" tabindex="3" placeholder="Website" /></p>
+<p><input type="text" id="userphone" name="userphone" style="display: none;"/></p>
+<p>
+  <textarea name="content" id="content" rows="10" tabindex="4" placeholder="Komentarz" style="width: 100%;"></textarea>
+</p>
+<button id="btn" tabindex="5">Wyślij</button><small><i><sup> beta</sup></i></small>
+
+<script>
+$("document").ready(function() {
+   $("#btn").click(postComent);
+
+});
+
+function postComent(){
+    $("#info").text("Wysyłanie ...");
+    $.ajax({
+      url : 'https://comments.devbo.pl',
+      data : {
+        username : $("#username").val(),
+        useremail : $("#useremail").val(),
+        userwebsite : $("#userwebsite").val(),
+        filename : "_posts\/" + $(location).attr("pathname").replace('/', '').replace(/\//g, '-').replace(".html", ".md"),
+        content : $("#content").val(),
+        userphone : $("#userphone").val(),
+      },
+      datatype : "json",
+      type : 'post',
+      success : function(data, textStatus, jqXHR) {
+        $("#info").text("Dziękuję, komentarz został przyjęty do realizacji.");
+        $("#username").val("");
+        $("#useremail").val("");
+        $("#userwebsite").val("");
+        $("#content").val("");
+      },
+      error : function(jqXHR, textStatus, errorThrown) {
+        try
+        {
+          $("#info").text($.parseJSON(jqXHR.responseText).errors[0].errorMessage);
+        }
+        catch(e)
+        {
+          $("#info").text("Przepraszam, wystąpił nieoczekiwany błąd. Spróbuj ponownie później.");
+        }
+      }
+    });
+}
+</script>

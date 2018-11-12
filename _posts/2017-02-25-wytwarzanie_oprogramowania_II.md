@@ -414,3 +414,7 @@ Powyższe przykłady są tylko niewielką częścią zagadnień, na temat który
 [1]: https://www.nunit.org "NUnit"
 [2]: http://wazniak.mimuw.edu.pl/index.php?title=Io-8-wyk-toc "Wzorce projektowe"
 [3]: https://www.martinfowler.com/eaaCatalog/ "Wzorce aplikacyjne"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

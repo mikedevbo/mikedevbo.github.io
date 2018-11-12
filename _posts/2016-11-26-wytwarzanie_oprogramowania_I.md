@@ -284,3 +284,61 @@ Z komputerem można "rozmawiać" na wiele sposobów, ale sama znajomość język
 [4]: https://msdn.microsoft.com/en-us/library/ms228593.aspx "C# language"
 [5]: http://fsharp.org/specs/language-spec/ "F# language"
 [6]: http://www.deransart.fr/prolog/docs.html "Prolog language"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}
+
+---
+<p />
+
+**Jacek**
+
+sjflsjflskj
+
+sfds  
+sfsdfsdf
+
+sfs
+
+2010-10-10 14:56 UTC
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+sdfsfs  
+sdfsdf
+
+2010-10-10 20:55 UTC
+
+---
+
+<p />
+
+**Placek**
+
+sdkjflksdjfl  
+skfljks  
+sfkjs  
+sklfjlsdkjflds  
+slkfj  
+sljflkdsjfl  
+ldkjf  
+aaaa
+
+2010-10-10 14:56 UTC
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+sdfsfs\
+sdfsdf
+
+2010-10-10 20:55 UTC
+
+---
+<p />
