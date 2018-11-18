@@ -288,39 +288,3 @@ Z komputerem można "rozmawiać" na wiele sposobów, ale sama znajomość język
 {{ site.mark_post_as_end }}
 
 ### {{ site.comments }}
-
-**user**
-
-test
-
-2018-11-18 18:45 UTC
-
----
-<p />
-
-[mikedevbo](https://ddtd.pl)
-
-test odp
-
-2018-11-18 18:50 UTC
-
----
-<p />
-
-**User**
-
-Test
-
-2018-11-18 18:56 UTC
-
----
-<p />
-
-[mikedevbo](https://ddtd.pl)
-
-test odp
-
-2018-11-18 18:58 UTC
-
----
-<p />
