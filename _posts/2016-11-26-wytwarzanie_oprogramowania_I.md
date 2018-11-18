@@ -284,3 +284,4 @@ Z komputerem można "rozmawiać" na wiele sposobów, ale sama znajomość język
 [4]: https://msdn.microsoft.com/en-us/library/ms228593.aspx "C# language"
 [5]: http://fsharp.org/specs/language-spec/ "F# language"
 [6]: http://www.deransart.fr/prolog/docs.html "Prolog language"
+begin-**user_1**-test-2018-11-18 17:51 UTC
