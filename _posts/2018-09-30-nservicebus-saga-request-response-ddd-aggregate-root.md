@@ -426,3 +426,4 @@ Jeśli masz okazję brać udział w projektowaniu rozwiązań informatycznych, z
 [5]: http://domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf "DDD Reference"
 [6]: https://martinfowler.com/bliki/BoundedContext.html "DDD Bounded Context"
 [7]: https://martinfowler.com/bliki/DDD_Aggregate.html "DDD Aggregate"
+begin-**user**-test-2018-11-18 18:17 UTC
