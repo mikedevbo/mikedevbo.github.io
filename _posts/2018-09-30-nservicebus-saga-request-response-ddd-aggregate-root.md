@@ -430,21 +430,3 @@ Jeśli masz okazję brać udział w projektowaniu rozwiązań informatycznych, z
 {{ site.mark_post_as_end }}
 
 ### {{ site.comments }}
-
-**user**
-
-test
-
----
-<p />
-
-2018-11-18 19:02 UTC
-
-[mikedevbo](https://ddtd.pl)
-
-test odp
-
-2018-11-18 19:05 UTC
-
----
-<p />
