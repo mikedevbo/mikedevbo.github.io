@@ -120,3 +120,7 @@ Warto zawsze pamiętać aby ze zbioru wielu możliwych języków, framework'ów,
 [1]: http://udidahan.com/ "Udi Dahan"
 [2]: https://particular.net/nservicebus "NServiceBus"
 [3]: https://docs.particular.net/tutorials/intro-to-nservicebus/ "intro-to-nservicebus"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

@@ -77,3 +77,7 @@ To tyle w temacie projektowania rozwiązania. W następnym poście zobaczymy w j
 [12]: https://docs.particular.net/nservicebus/sagas/ "Sagas"
 [13]: http://www.enterpriseintegrationpatterns.com/ "EIP"
 [14]: http://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html "Process Manager"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

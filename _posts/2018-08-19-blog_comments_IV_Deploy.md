@@ -730,3 +730,7 @@ Ten post kończy serię pokazującą, jak na przykładzie funkcjonalności dodaw
 [15]: https://logging.apache.org/log4net/ "Log4Net"
 [16]: https://winscp.net/eng/docs/library "WinScp .NET Assembly and COM library"
 [17]: https://docs.particular.net/nservicebus/hosting/windows-service "NServiceBus Windows Service"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

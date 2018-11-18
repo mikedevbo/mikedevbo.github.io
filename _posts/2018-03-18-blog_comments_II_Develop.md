@@ -296,4 +296,8 @@ To tyle jeśli chodzi o wybrane fragmenty implementacji. W następnym poście zo
 [2]: https://docs.microsoft.com/pl-pl/dotnet/csharp/whats-new/csharp-6 "C#"
 [3]: https://particular.net/nservicebus "NServiceBus"
 [4]: http://nancyfx.org/ "Nancy"
-[5]: https://en.wikipedia.org/wiki/Loose_coupling "Loose coupling" 
+[5]: https://en.wikipedia.org/wiki/Loose_coupling "Loose coupling"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

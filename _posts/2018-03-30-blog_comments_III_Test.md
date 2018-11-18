@@ -249,3 +249,7 @@ Tych parę przykładów pokazuje, w jaki sposób można pisać testy. W następn
 [5]: http://nsubstitute.github.io/ "NSubstitute"
 [6]: https://en.wikipedia.org/wiki/Software_testing "Software_testing"
 [7]: https://github.com/nunit/docs/wiki/TestCase-Attribute "TestCase-Attribute"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}

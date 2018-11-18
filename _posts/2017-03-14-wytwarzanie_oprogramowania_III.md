@@ -137,3 +137,7 @@ Po zdiagnozowaniu, naprawieniu problematycznego kawałka kodu i ponownym wdroże
 * użytkownicy wracają do pracy
 
 Można zauważyć, że post ten dotyczy **czasu** związanego z ponownym wdrożeniem. Co natomiast z **czasem** związanym ze zdiagnozowaniem i naprawianiem problematycznego kawałka kodu? O tym będzie następny post z tej serii.
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}
