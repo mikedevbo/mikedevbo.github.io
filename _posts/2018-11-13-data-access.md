@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "data-access"
+title:  "5 sposobów komunikacji z relacyjną bazą danych"
 date:   2018-11-13
 ---
 
