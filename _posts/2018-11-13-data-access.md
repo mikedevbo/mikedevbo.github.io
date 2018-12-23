@@ -608,3 +608,7 @@ Szybki dostęp:
 [12]: https://particular.net/blog/nservicebus-6.0-public-beta "NServiceBus 6.0 public beta"
 [13]: https://particular.net/blog/async-await-its-time "Async/await its time"
 [14]: https://www.mountaingoatsoftware.com/blog/spikes "Spikes"
+
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}
