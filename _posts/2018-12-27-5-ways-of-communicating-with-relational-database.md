@@ -584,7 +584,7 @@ WHERE (([Id] = @1) AND ([CoachId] = @2))
 Znając różne możliwości łączenia się z bazą danych, jesteśmy bardziej elastyczni w konstruowaniu rozwiązań. 
 Przykładowo jeśli całość oparta jest na jednym podejściu, a któreś z zapytań do bazy danych trwa zbyt długo, to można tę jedną część zoptymalizować, używając innego podejścia. Jeśli trafi nam się rozwój produktu, gdzie zastosowano jedno z podejść, to nie będzie dla nas problemem kontynuowanie pracy w tym podejściu. Oczywiście powyższa lista bibliotek nie jest listą skończoną, podobnie jak wybór modelu relacyjnego do przechowywania danych nie jest jedynym możliwym wyborem.
 
-Wszystkie powyższe przykłady dostępne są na [GitHubie].
+Wszystkie powyższe przykłady dostępne są na [GitHubie][17].
 
 Szybki dostęp:
 * [ADO.NET](#adonet)
@@ -610,6 +610,7 @@ Szybki dostęp:
 [14]: https://www.mountaingoatsoftware.com/blog/spikes "Spikes"
 [15]: https://docs.microsoft.com/en-us/dotnet/csharp/ "CSharp language"
 [16]: https://docs.microsoft.com/en-us/dotnet/ "DotNet framework"
+[17]: https://github.com/mikedevbo/data-access "data-access"
 
 {{ site.mark_post_as_end }}
 
