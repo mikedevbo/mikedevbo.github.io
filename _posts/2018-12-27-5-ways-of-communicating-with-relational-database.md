@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "5 sposobów komunikacji z relacyjną bazą danych"
-date:   2018-11-13
+date:   2018-12-27
 ---
 
 Kodując tzw. "back-end" w biznesowych systemach informatycznych w 90% mamy do czynienia z operacjami na bazie danych. Potrzebny jest zatem sposób w jaki możemy się z bazą danych porozumieć. Artykuł ten jest wycieczką po bibliotekach/technologiach umożliwiającymi kontakt z bazą danych z którymi miałem do czynienia przy różnych projektach. Poniższe przykłady są implementacją w języku [C#][15] na platformie [.NET][16] oraz zakładają połączenie z relacyjną bazą danych [MS SQL Server][1]. Całość przedstawiona jest kontekście operowania na danych dotyczących informacji o graczu tenisa:
