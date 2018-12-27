@@ -4,7 +4,7 @@ title:  "5 sposobów komunikacji z relacyjną bazą danych"
 date:   2018-12-27
 ---
 
-Kodując tzw. "back-end" w biznesowych systemach informatycznych w 90% mamy do czynienia z operacjami na bazie danych. Potrzebny jest zatem sposób w jaki możemy się z bazą danych porozumieć. Artykuł ten jest wycieczką po bibliotekach/technologiach umożliwiającymi kontakt z bazą danych z którymi miałem do czynienia przy różnych projektach. Poniższe przykłady są implementacją w języku [C#][15] na platformie [.NET][16] oraz zakładają połączenie z relacyjną bazą danych [MS SQL Server][1]. Całość przedstawiona jest kontekście operowania na danych dotyczących informacji o graczu tenisa:
+Kodując tzw. "back-end" w biznesowych systemach informatycznych, w 90% mamy do czynienia z operacjami na bazie danych. Potrzebny jest zatem sposób, w jaki możemy się z bazą danych porozumieć. Artykuł ten jest wycieczką po bibliotekach/technologiach (z którymi miałem do czynienia przy różnych projektach) umożliwiających kontakt z relacyjną bazą danych. Poniższe przykłady są implementacją w języku [C#][15] na platformie [.NET][16] oraz zakładają połączenie bazą danych [MS SQL Server][1]. Całość przedstawiona jest kontekście operowania na danych dotyczących informacji o graczu tenisa:
 
 * pobranie informacji o graczu - select z widoku bazodanowego
 * dodanie nowego gracza - insert danych do tabeli
@@ -12,7 +12,7 @@ Kodując tzw. "back-end" w biznesowych systemach informatycznych w 90% mamy do c
 
 ## [ADO.NET][2]
 
-Początki to najbardziej podstawowy sposób łączenia się z bazą danych czyli ADO.NET. W przykładach kod SQL zawarty jest w kodzie C#. W rzeczywistości kod SQL pisany był w procedurach składowanych tak aby nie mieszać go z kodem C#. ADO.NET umożliwia wywoływanie procedur składowanych poprzez odpowiednie ustawienie obiektu SQLCommand:
+Początki to najbardziej podstawowy sposób łączenia się z bazą danych, czyli ADO.NET. W przykładach kod SQL zawarty jest w kodzie C#. W rzeczywistości kod SQL pisany był w procedurach składowanych tak, aby nie mieszać go z kodem C#. ADO.NET umożliwia wywoływanie procedur składowanych poprzez odpowiednie ustawienie obiektu SQLCommand:
 
 **command.CommandType = CommandType.StoredProcedure;**
 
@@ -168,7 +168,7 @@ public void SetPlayerCoach(int playerId, int? newCoachId, int? previousCoachId)
 
 ## [Enterprise Library - Data Access Application Block][3]
 
-Używając ADO.NET bardzo szybko dochodzi się do wniosku, że trzeba napisać sporo bardzo podobnego oraz powtarzalnego kodu. Najbardziej mechanicznym i podatnym na błędy kodem jest mapowanie zwróconych danych z bazy na poszczególne property obiektu reprezentującego wynik. W takich sytuacjach opcje są co najmniej dwie: napisać własny generyczny kod lub poszukać biblioteki realizującej taką funkcjonalność. W moim przypadku było to skorzystanie z biblioteki Enterprise Library - Data Access Application Block umożliwiającej takie mapowanie poprzez wywołanie:
+Używając ADO.NET, bardzo szybko dochodzi się do wniosku, że trzeba napisać sporo podobnego oraz powtarzalnego kodu. Najbardziej mechanicznym i podatnym na błędy kodem jest mapowanie zwróconych danych z bazy na poszczególne property obiektu reprezentującego wynik. W takich sytuacjach opcje są co najmniej dwie: napisać własny generyczny kod lub poszukać biblioteki realizującej taką funkcjonalność. W moim przypadku było to skorzystanie z biblioteki Enterprise Library - Data Access Application Block umożliwiającej takie mapowanie poprzez wywołanie:
 
 **var accessor = db.CreateSqlStringAccessor&lt;PlayersBaseInfoView&gt;(sql, parameterMapper);**
 
@@ -295,13 +295,13 @@ public void SetPlayerCoach(int playerId, int? newCoachId, int? previousCoachId)
 
 ## ORM
 
-Używając dwóch powyższych podejść w wielu projektach a także kodując większość logiki biznesowej w języku C# nasunął mi się wniosek, że tak naprawdę 90% kodu SQL to są podstawowe operacje select, insert oraz update pisane w powtarzalny, niemal automatyczny sposób. Pojawiła się więc myśl czy istnieją rozwiązania, które mogą taki kod SQL generować automatycznie. Okazało się, że tak i że takie podejście można zrealizować w tzw. [Object Relational Mapping][8]. Niestety w moim przypadku bariera wejścia okazała się zbyt duża, ponieważ materiały na które natrafiałem sugerowały, że aby poprawnie używać ORMa najlepiej jest projektować rozwiązania w oparciu o model dziedzinowy co samo w sobie było wyzwaniem. (w dalszej części artykułu zobaczymy, że jednak da się inaczej :))
+Używając dwóch powyższych podejść w wielu projektach, a także kodując większość logiki biznesowej w języku C#, nasunął mi się wniosek, że tak naprawdę 90% kodu SQL to są podstawowe operacje select, insert oraz update pisane w powtarzalny, niemal automatyczny sposób. Pojawiła się więc myśl, czy istnieją rozwiązania, które mogą taki kod SQL generować automatycznie. Okazało się, że tak i że takie podejście można zrealizować w tzw. [Object Relational Mapping][8]. Niestety w moim przypadku bariera wejścia okazała się zbyt duża, ponieważ materiały, na które natrafiałem, sugerowały, że aby poprawnie używać ORMa, najlepiej jest projektować rozwiązania w oparciu o model dziedzinowy, co samo w sobie było wyzwaniem (w dalszej części artykułu zobaczymy, że jednak da się inaczej :)).
 
-Jako ćwiczenie zachęcam do zakodowania trzech operacji zdefiniowanych na początku artykułu używając np. biblioteki [NHibernate][9].
+Jako ćwiczenie zachęcam do zakodowania trzech operacji zdefiniowanych na początku artykułu z wykorzystaniem np. biblioteki [NHibernate][9].
 
 ## [Dapper][4]
 
-Trochę zniechęcony powróciłem do dobrze znanego mi ADO oraz EntLiba. W między czasie usłyszałem o bibliotece zwanej Dapper. Szybki research i okazało się, że podobnie jak EntLib, Dapper również potrafi mapować dane z bazy na obiekt a dodatkowo sam zarządza odpowiednim konstruowaniem parametrów wejściowych zapytań SQL przez co napisany kod upraszcza się. Ponieważ dalej to my definiujemy kod SQL to w przypadku operacji update aby zachować Optimistic Offline Lock, tak jak poprzednio, musimy skonstruować odpowiednie zapytanie w zależności od tego czy poprzednia wartość na której opieramy implementację ma wartość null czy nie. W przykładach jest to wartość zmiennej **previousCoachId**. Kluczową właściwością Dappera jest jego szybkość działania. Porównanie wyników z innymi bibliotekami można zobaczyć na stronie dokumentacji.
+Trochę zniechęcony moim niepowodzeniem powróciłem do dobrze znanego mi ADO oraz EntLiba. W między czasie usłyszałem o bibliotece zwanej Dapper. Szybki research i okazało się, że podobnie jak EntLib, Dapper również potrafi mapować dane z bazy na obiekt a dodatkowo sam zarządza odpowiednim konstruowaniem parametrów wejściowych zapytań SQL, przez co napisany kod upraszcza się. Ponieważ dalej to my definiujemy kod SQL, to w przypadku operacji update, aby zachować Optimistic Offline Lock, tak jak poprzednio, musimy skonstruować odpowiednie zapytanie w zależności od tego, czy poprzednia wartość, na której opieramy implementację ma wartość null czy nie. W przykładach jest to wartość zmiennej **previousCoachId**. Kluczową właściwością Dappera jest jego szybkość działania. Porównanie wyników z innymi bibliotekami można zobaczyć na stronie dokumentacji.
 
 * select
 
@@ -381,7 +381,7 @@ public void SetPlayerCoach(int playerId, int? newCoachId, int? previousCoachId)
 
 ## [Simple.Data][5]
 
-W nowym projekcie zapadła decyzja aby jeden z podsystemów zrealizować w oparciu o platformę [Particular.net][10], której sercem jest framework [NServiceBus][11]. W tamtym czasie jego najnowszą wersją była wersja v5. Wybór technologii dostępu do bazy danych miał być prosty - Dapper, ale natrafiłem na bibliotekę Simple.Data. Okazała się ona strzałem w dziesiątkę. Spełniała wszystkie kryteria, których potrzebowałem. Pierwszą istotną zmianą w stosunku do poprzedników (nie wliczając ORMa) jest to, że kod SQL generowany jest automatycznie przez co zauważalnie zmniejsza się ilość kodu do napisania. Drugą istotną zmianą jest to, że Simple.Data opiera się o typ **dynamic** wprowadzony w **C# 4.0**. Trzecią istotną zmianą jest sposób w jaki konstruowany jest update z zachowaniem Optimistic Offline Lock. Metoda **UpdateAll** ze zdefiniowanym odpowiednim **Condition** sama wygeneruje odpowiedni warunek **WHERE** w zależności od tego czy poprzednia wartość zmiennej na której opieramy implementację (**previousCoachId**) ma wartość null czy nie.
+W nowym projekcie zapadła decyzja, aby jeden z podsystemów zrealizować w oparciu o platformę [Particular.net][10], której sercem jest framework [NServiceBus][11]. W tamtym czasie jego najnowszą wersją była wersja v5. Wybór technologii dostępu do bazy danych miał być prosty - Dapper, ale natrafiłem na bibliotekę Simple.Data. Okazała się ona strzałem w dziesiątkę. Spełniała wszystkie kryteria, których potrzebowałem. Pierwszą istotną zmianą w stosunku do poprzedników (nie wliczając ORMa) jest to, że kod SQL generowany jest automatycznie, przez co zauważalnie zmniejsza się ilość kodu do napisania. Drugą istotną zmianą jest to, że Simple.Data opiera się o typ **dynamic** wprowadzony w **C# 4.0**. Trzecią istotną zmianą jest sposób, w jaki konstruowany jest update z zachowaniem Optimistic Offline Lock. Metoda **UpdateAll** ze zdefiniowanym odpowiednim **Condition** sama wygeneruje odpowiedni warunek **WHERE** w zależności od tego, czy poprzednia wartość zmiennej, na której opieramy implementację (**previousCoachId**) ma wartość null czy nie.
 
 * select
 
@@ -467,9 +467,9 @@ N'@p1 int,@p2 int,@p3 int',@p1=3,@p2=1,@p3=2
 
 ## [Entity Framework][6]
 
-Kolejny projekt, kolejne decyzje projektowe. Pierwszy wybór to oczywiście realizacja funkcjonalności w oparciu o platformę Particular.net oraz framework NServiceBus. W tym czasie zespół rozwijający framework wydał jego v6 wersję wprowadzając [wiele nowości][12]. Jedną z nich jest pełne wsparcie [C# 5.0 async/await][13]. W kontekście wyboru sposobu łączenia się z bazą danych wskazanym było mieć bibliotekę, która również wspierała asynchroniczność przy wywoływaniu zapytań do bazy. Simple.Data jako produkt skończony nie oferowała takiego wsparcia, trzeba więc było wybrać coś innego. Pierwsza myśl - powrót do Dappera. Druga myśl - "A może dać ponownie szansę podejściu ORM?". Decyzja o ponownym wykorzystaniu ORMa nie była łatwa, zwłaszcza po wcześniejszych niezbyt udanych doświadczeniach. W ramach tzw. [Spikea][14] postawiłem bibliotece takie oto wymagania do spełnienia aby zdecydować się na jej wybór:
+Kolejny projekt, kolejne decyzje projektowe. Pierwszy wybór to oczywiście realizacja funkcjonalności w oparciu o platformę Particular.net oraz framework NServiceBus. W tym czasie zespół rozwijający framework wydał jego wersję v6, wprowadzając [wiele nowości][12]. Jedną z nich jest pełne wsparcie [C# 5.0 async/await][13]. W kontekście wyboru sposobu łączenia się z bazą danych wskazanym było mieć bibliotekę, która również wspierała asynchroniczność przy wywoływaniu zapytań do bazy. Simple.Data jako produkt skończony nie oferowała takiego wsparcia, trzeba więc było wybrać coś innego. Pierwsza myśl - powrót do Dappera. Druga myśl - "A może dać ponownie szansę podejściu ORM?". Decyzja o ponownym wykorzystaniu ORMa nie była łatwa, zwłaszcza po wcześniejszych niezbyt udanych doświadczeniach. W ramach tzw. [Spikea][14] postawiłem bibliotece takie oto wymagania do spełnienia, aby zdecydować się na jej wybór:
 
-* chcę jej używać jako warstwa dostępu do bazy danych tak samo jak pozostałe biblioteki w oderwaniu od sposobu projektowania rozwiązania
+* chcę jej używać jako warstwa dostępu do bazy danych, tak samo jak pozostałe biblioteki w oderwaniu od sposobu projektowania rozwiązania
 * wsparcie dla trzech operacji wymienionych na początku tego artykułu:
     * select z widoku bazodanowego
     * insert do tabeli
@@ -477,7 +477,7 @@ Kolejny projekt, kolejne decyzje projektowe. Pierwszy wybór to oczywiście real
 * w razie potrzeby chcę mieć możliwość napisania własnego SQLa lub wywołania procedury składowanej
 * kod C# ma być prosty i czytelny
 
-Po zakończeniu Spikea okazało się, że Entity Framework spełnia wszystkie te wymagania a dodatkowo sprawdza się przy projektowaniu rozwiązań opartych o messaging. Podobnie jak w przypadku Simple.Data kod SQL generowany jest automatycznie. W przypadku konstruowania operacji update z Optimistic Offline Lock odpowiedni warunek **WHERE** również generowany jest automatycznie w zależności od tego czy poprzednia wartość zmiennej na której opieramy implementację ma wartość null czy nie. Różnicą w porównaniu do Simple.Data jest sposób poinstruowania Entity Frameworka, które property obiektu ma być uwzględnione przy generowaniu zapytania SQL. Takie property należy oznaczyć specjalnym atrybutem:
+Po zakończeniu Spikea okazało się, że Entity Framework spełnia wszystkie te wymagania a dodatkowo sprawdza się przy projektowaniu rozwiązań opartych o messaging. Podobnie jak w przypadku Simple.Data kod SQL generowany jest automatycznie. W przypadku konstruowania operacji update z Optimistic Offline Lock odpowiedni warunek **WHERE** również generowany jest automatycznie w zależności od tego, czy poprzednia wartość zmiennej, na której opieramy implementację ma wartość null czy nie. Różnicą w porównaniu do Simple.Data jest sposób poinstruowania Entity Frameworka, które property obiektu ma być uwzględnione przy generowaniu zapytania SQL. Takie property należy oznaczyć specjalnym atrybutem:
 
 {% highlight csharp %}
 [ConcurrencyCheck]
@@ -486,7 +486,7 @@ public int? CoachId { get; set; }
 
 Nie trzeba również ręcznie zgłaszać wyjątku **DbUpdateConcurrencyException**. Całość dzieje się automatycznie.
 
-Jeśli udało ci się zakodować rozwiązanie z sekcji ORM z użyciem np. NHibernatea to zapewne również tej biblioteki można używać w takim podejściu.
+Jeśli udało ci się zakodować rozwiązanie z sekcji ORM z użyciem np. NHibernatea, to zapewne również tej biblioteki można używać w takim podejściu.
 
 * select
 
@@ -581,8 +581,8 @@ WHERE (([Id] = @1) AND ([CoachId] = @2))
 
 ## Podsumowanie
 
-Znając różne możliwości łączenia się z bazą danych jesteśmy bardziej elastyczni w konstruowaniu rozwiązań. 
-Przykładowo jeśli całość oparta jest na jednym podejściu, a któreś z zapytań do bazy danych trwa zbyt długo, to można tę jedną część zoptymalizować używając innego podejścia. Jeśli trafi nam się rozwój produktu gdzie zastosowano jedno z podejść to nie będzie dla nas problemem kontynuowanie pracy w tym podejściu. Oczywiście powyższa lista bibliotek nie jest listą skończoną podobnie jak wybór modelu relacyjnego do przechowywania danych nie jest jedynym możliwym wyborem.
+Znając różne możliwości łączenia się z bazą danych, jesteśmy bardziej elastyczni w konstruowaniu rozwiązań. 
+Przykładowo jeśli całość oparta jest na jednym podejściu, a któreś z zapytań do bazy danych trwa zbyt długo, to można tę jedną część zoptymalizować, używając innego podejścia. Jeśli trafi nam się rozwój produktu, gdzie zastosowano jedno z podejść, to nie będzie dla nas problemem kontynuowanie pracy w tym podejściu. Oczywiście powyższa lista bibliotek nie jest listą skończoną, podobnie jak wybór modelu relacyjnego do przechowywania danych nie jest jedynym możliwym wyborem.
 
 Wszystkie powyższe przykłady dostępne są na [GitHubie].
 
