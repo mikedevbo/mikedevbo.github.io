@@ -4,10 +4,10 @@ title:  "5 sposobów komunikacji z relacyjną bazą danych"
 date:   2018-11-13
 ---
 
-Kodując tzw. "backend" w biznesowych systemach informatycznych w 90% mamy do czynienia z operacjami na bazie danych. Potrzebny jest zatem sposób w jaki możemy się z bazą danych porozumieć. Artykuł ten jest wycieczką po bibliotekach/technologiach umożliwiającymi kontakt z bazą danych z którymi miałem do czynienia przy różnych projektach. Poniższe przykłady są implementacją w języku C# na platformie .NET oraz zakładają połączenie z relacyjną bazą danych [MS SQL Server][1]. Całość przedstawiona jest kontekście operowania na danych dotyczących informacji o graczu tenisa:
+Kodując tzw. "back-end" w biznesowych systemach informatycznych w 90% mamy do czynienia z operacjami na bazie danych. Potrzebny jest zatem sposób w jaki możemy się z bazą danych porozumieć. Artykuł ten jest wycieczką po bibliotekach/technologiach umożliwiającymi kontakt z bazą danych z którymi miałem do czynienia przy różnych projektach. Poniższe przykłady są implementacją w języku [C#][15] na platformie [.NET][16] oraz zakładają połączenie z relacyjną bazą danych [MS SQL Server][1]. Całość przedstawiona jest kontekście operowania na danych dotyczących informacji o graczu tenisa:
 
 * pobranie informacji o graczu - select z widoku bazodanowego
-* dodanie nowego gracza - insert danych to tabeli
+* dodanie nowego gracza - insert danych do tabeli
 * ustawienie trenera gracza - update wybranych danych z [Optimistic Offline Lock][7]
 
 ## [ADO.NET][2]
@@ -381,7 +381,7 @@ public void SetPlayerCoach(int playerId, int? newCoachId, int? previousCoachId)
 
 ## [Simple.Data][5]
 
-W nowym projekcie zapadła decyzja aby jeden z podsystemów zrealizować w oparciu o platformę [Particular.net][10], której sercem jest framework [NServiceBus][11]. W tamtym czasie jego najnowszą wersją była wersja v5. Wybór technologii dostępu do bazy danych miał być prosty - Dapper, ale natrafiłem na bibliotekę Simple.Data. Okazała się ona strzałem w dziesiątkę. Spełniała wszystkie kryteria, których potrzebowałem. Pierwszą istotną zmianą w stosunku do poprzedników (nie wliczając ORMa) jest to, że kod SQL generowany jest automatycznie przez co zauważalnie zmniejsza się ilość kodu C# do napisania. Drugą istotną zmianą jest to, że Simple.Data opiera się o typ **dynamic** wprowadzony w **C# 4.0**. Trzecią istotną zmianą jest sposób w jaki konstruowany jest update z zachowaniem Optimistic Offline Lock. Metoda **UpdateAll** ze zdefiniowanym odpowiednim **Condition** sama wygeneruje odpowiedni warunek **WHERE** w zależności od tego czy poprzednia wartość zmiennej na której opieramy implementację (**previousCoachId**) ma wartość null czy nie.
+W nowym projekcie zapadła decyzja aby jeden z podsystemów zrealizować w oparciu o platformę [Particular.net][10], której sercem jest framework [NServiceBus][11]. W tamtym czasie jego najnowszą wersją była wersja v5. Wybór technologii dostępu do bazy danych miał być prosty - Dapper, ale natrafiłem na bibliotekę Simple.Data. Okazała się ona strzałem w dziesiątkę. Spełniała wszystkie kryteria, których potrzebowałem. Pierwszą istotną zmianą w stosunku do poprzedników (nie wliczając ORMa) jest to, że kod SQL generowany jest automatycznie przez co zauważalnie zmniejsza się ilość kodu do napisania. Drugą istotną zmianą jest to, że Simple.Data opiera się o typ **dynamic** wprowadzony w **C# 4.0**. Trzecią istotną zmianą jest sposób w jaki konstruowany jest update z zachowaniem Optimistic Offline Lock. Metoda **UpdateAll** ze zdefiniowanym odpowiednim **Condition** sama wygeneruje odpowiedni warunek **WHERE** w zależności od tego czy poprzednia wartość zmiennej na której opieramy implementację (**previousCoachId**) ma wartość null czy nie.
 
 * select
 
@@ -608,6 +608,8 @@ Szybki dostęp:
 [12]: https://particular.net/blog/nservicebus-6.0-public-beta "NServiceBus 6.0 public beta"
 [13]: https://particular.net/blog/async-await-its-time "Async/await its time"
 [14]: https://www.mountaingoatsoftware.com/blog/spikes "Spikes"
+[15]: https://docs.microsoft.com/en-us/dotnet/csharp/ "CSharp language"
+[16]: https://docs.microsoft.com/en-us/dotnet/ "DotNet framework"
 
 {{ site.mark_post_as_end }}
 
