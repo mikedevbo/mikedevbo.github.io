@@ -434,4 +434,4 @@ Patrząc na rodzaj zmian, jakich trzeba było dokonać, aby przejść na .NET Co
 
 {{ site.mark_post_as_end }}
 
-### {{ site.comments }}
+### {{ site.comments }}begin-**test**-test-2019-04-14 19:47 UTC
