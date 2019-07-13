@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Develop and Test z Particular Platfrom"
+title:  "Develop and Test z Particular Platform"
 date:   2019-07-06
 ---
 
