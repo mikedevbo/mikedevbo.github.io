@@ -1,10 +1,15 @@
 ---
 layout: post
-title:  "Develop and Test z Particular Platform"
+title:  "Develop and Test z Particular Service Platform"
 date:   2019-07-06
 ---
 
-W poprzednich artykułach pisałem o tym, w jaki sposób można wykorzystać framework NServiceBus w procesie wytwarzania oprogramowania. Framework ten jest częścią większej platformy zwanej [**Particular Platform**][23]. W tym artykule zobaczymy, jak pozostałe komponenty wchodzące w skład platformy pomagają na etapie **Develop** oraz **Test**, w kontekście trzech funkcjonalności:
+Posty z tej serii:
+
+* [Develop and Test z Particular Service Platform][31]
+* [Monitoring z Particular Service Platform][32]
+
+W poprzednich artykułach pisałem o tym, w jaki sposób można wykorzystać framework NServiceBus w procesie wytwarzania oprogramowania. Framework ten jest częścią większej platformy zwanej [**Particular Service Platform**][23]. W tym artykule zobaczymy, jak pozostałe komponenty wchodzące w skład platformy pomagają na etapie **Develop** oraz **Test**, w kontekście trzech funkcjonalności:
 
 * przywracania wiadomości z kolejki błędów do ponownego przetworzenia
 * przeglądania i analizy historii przesłanych wiadomości
@@ -26,7 +31,7 @@ Więcej szczegółów o każdym z komponentów można znaleźć w [dokumentacji 
 Aby móc skorzystać z funkcjonalności wymienionych we wstępie, trzeba skomunikować ze sobą poszczególne komponenty platformy. W przypadku NServiceBusa ustawiamy dwie właściwości, konfigurując Endpointa:
 
 {% highlight csharp %}
-var endpointConfiguration = new EndpointConfiguration("Host");
+var endpointConfiguration = new EndpointConfiguration("blogcomments");
 endpointConfiguration.SendFailedMessagesTo("error");
 endpointConfiguration.AuditProcessedMessagesTo("audit");
 {% endhighlight %}
@@ -315,7 +320,7 @@ Podobnie jak w przypadku ServicePulsa, ServiceInsight dostarcza tych wszystkich 
 
 ## Podsumowanie
 
-Używając całej Platformy Particular, mamy do dyspozycji narzędzia, pozwalające efektywnie wytwarzać oprogramowanie w oparciu o ideę Messagingu i Queueingu. Głównym składnikiem platformy jest **NServiceBus**, którego uzupełnieniem są: **ServiceControl**, **ServicePulse** oraz **ServiceInsight**. W artykule opisałem, w jaki sposób można używać platformy na etapach **Develop** oraz **Test**. W następnym artykule zobaczymy, w jaki sposób Particular Platform wspomaga obsługę produkcyjnie wdrożonych funkcjonalności.
+Używając całej Platformy Particular, mamy do dyspozycji narzędzia, pozwalające efektywnie wytwarzać oprogramowanie w oparciu o ideę Messagingu i Queueingu. Głównym składnikiem platformy jest **NServiceBus**, którego uzupełnieniem są: **ServiceControl**, **ServicePulse** oraz **ServiceInsight**. W artykule opisałem, w jaki sposób można używać platformy na etapach **Develop** oraz **Test**. W następnym artykule zobaczymy, w jaki sposób Particular Service Platform wspomaga obsługę produkcyjnie wdrożonych funkcjonalności.
 
 [1]: {{ site.url }}/assets/particular_platform_dev_test/SPDashboard.png
 [2]: {{ site.url }}/assets/particular_platform_dev_test/SPDashboardFailedMessages.png
@@ -347,6 +352,8 @@ Używając całej Platformy Particular, mamy do dyspozycji narzędzia, pozwalaj�
 [28]: https://docs.particular.net/nservicebus/recoverability/ "NServiceBus recoverability"
 [29]: https://docs.particular.net/transports/sql/operations-scripting "SQL Transport scripts"
 [30]: https://docs.particular.net/transports/msmq/operations-scripting "MSMQ Transport scripts"
+[31]: {{ site.url }}{% link _posts/2019-07-06-particular-platform-dev-test.md %}
+[32]: {{ site.url }}{% link _posts/2019-08-11-particular-platform-monitoring.md %}
 
 {{ site.mark_post_as_end }}
 
