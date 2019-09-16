@@ -4,6 +4,15 @@ title:  "F# & NServiceBus - praktyczny przewodnik: Wprowadzenie"
 date:   2019-09-01
 ---
 
+Posty z tej serii:
+
+* [F# & NServiceBus - praktyczny przewodnik: Wprowadzenie][26]
+* [F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa][27]
+* F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy
+* F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów
+* F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń
+* F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga
+
 Kiedy siadasz do napisania kawałka funkcjonalności, czy zadajesz sobie pytanie, w jaki sposób ułożyć kod, aby daną funkcjonalność zrealizować? Pisząc w paradygmacie obiektowym, zastanawiasz się, ile klas utworzyć? Jakie powinny być powiązania pomiędzy poszczególnymi klasami? Jaki rozmiar powinna mieć klasa, żeby kod w niej zawarty był łatwy w utrzymaniu, a także gotowy na ewentualne przyszłe zmiany? Zgaduję, że w 90% na wszystkie te pytania odpowiedź brzmi **TAK**. Dwie najbardziej popularne techniki, które pomogą Ci w podjęciu decyzji i wyborze rozwiązania to [Wzorce projektowe][0] oraz zasady [SOLID][1]. Na wyższym poziomie projektowania będą to [Wzorce aplikacyjne][2]. W moim przypadku okazywały się one bardzo skuteczne. O kilku z nich pisałem w artykule [Wytwarzanie oprogramowania II - techniki programowania][3].
 
 Kodując rozwiązania w takim podejściu, zawsze jednak towarzyszyła mi niewytłumaczalna myśl, że ***"Coś jednak tu nie pasuje?"***. Punktem kulminacyjnym była sytuacja, kiedy zaprojektowałem rozwiązanie, które bardzo mocno opierało się na dwóch zasadach ***SOLID***: **Single Responsibility Principle (SRP)** oraz **Interface Segregation Principle (ISP)**. W pewnym momencie okazało się, że klasa odpowiedzialna za realizację pewnej funkcjonalności, posiada około dziesięciu, albo i więcej, zależności do zewnętrznych interfejsów. Przykład w pseudo kodzie:
@@ -270,6 +279,8 @@ Składając wszystko razem w jedną całość, postanowiłem napisać serię ar
 [23]: https://docs.microsoft.com/en-us/dotnet/ "dotnet"
 [24]: {{ site.url }}/assets/fsharp/fsharp_codeIlove_oo_dec.png
 [25]: https://www.youtube.com/watch?v=7rBtuhoSO5c "Świadomy Programista"
+[26]: {{ site.url }}{% link _posts/2019-09-01-fsharp-nservicebus-practical-guide-introduction.md %}
+[27]: {{ site.url }}{% link _posts/2019-09-16-fsharp-nservicebus-practical-guide-endpoint-configuration.md %}
 
 {{ site.mark_post_as_end }}
 
