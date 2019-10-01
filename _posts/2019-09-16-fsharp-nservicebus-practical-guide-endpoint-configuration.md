@@ -8,7 +8,7 @@ Posty z tej serii:
 
 * [F# & NServiceBus - praktyczny przewodnik: Wprowadzenie][1]
 * [F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa][6]
-* F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy
+* [F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy][8]
 * F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów
 * F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń
 * F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga
@@ -258,6 +258,7 @@ W następnym artykule pokażę Ci, w jaki sposób stworzyć nowy message, a tak�
 [5]: {{ site.url }}/assets/fsharp/fsharp_nsb_start_endpoint.png
 [6]: {{ site.url }}{% link _posts/2019-09-16-fsharp-nservicebus-practical-guide-endpoint-configuration.md %}
 [7]: https://github.com/mikedevbo/fsharp-nservicebus "fsharp-nservicebus"
+[8]: {{ site.url }}{% link _posts/2019-10-01-fsharp-nservicebus-practical-guide-sending-command.md %}
 
 {{ site.mark_post_as_end }}
 

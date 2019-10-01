@@ -8,7 +8,7 @@ Posty z tej serii:
 
 * [F# & NServiceBus - praktyczny przewodnik: Wprowadzenie][26]
 * [F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa][27]
-* F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy
+* [F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy][28]
 * F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów
 * F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń
 * F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga
@@ -281,6 +281,7 @@ Składając wszystko razem w jedną całość, postanowiłem napisać serię ar
 [25]: https://www.youtube.com/watch?v=7rBtuhoSO5c "Świadomy Programista"
 [26]: {{ site.url }}{% link _posts/2019-09-01-fsharp-nservicebus-practical-guide-introduction.md %}
 [27]: {{ site.url }}{% link _posts/2019-09-16-fsharp-nservicebus-practical-guide-endpoint-configuration.md %}
+[28]: {{ site.url }}{% link _posts/2019-10-01-fsharp-nservicebus-practical-guide-sending-command.md %}
 
 {{ site.mark_post_as_end }}
 
