@@ -70,7 +70,7 @@ Klasa **PlaceOrder** dziedziczy po interfejsie `ICommand` należącego do przest
 
 ## Przetwarzanie wiadomości
 
-Mając zdefiniowaną wiadomość, możemy utworzyć funkcjonalność, która będzie ją przetwarzać. W języku **NServiceBusa** taka funkcjonalność nazwa się **Message Handler**. W celu utworzenia **Handlera** dla wiadoości **PlaceOrder**:
+Mając zdefiniowaną wiadomość, możemy utworzyć funkcjonalność, która będzie ją przetwarzać. W języku **NServiceBusa** taka funkcjonalność nazwa się **Message Handler**. W celu utworzenia **Handlera** dla wiadomości **PlaceOrder**:
 
 1. dodaj do projektu **ClientUI** referencję do wcześniej utworzonego projektu **Messages**
 1. dodaj do projektu **ClientUI** nowy plik źródłowy **F#** oraz nadaj mu nazwę **Handlers.fs**
