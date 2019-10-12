@@ -249,7 +249,7 @@ Ostatnim elementem jest prezentacja twórcy języka F# **Don Syme** pod tytułem
 
 Źródło - [F# Code I Love][22]
 
-Zdałem sobie sprawę, jaka jest przyczyna tego, że nie udaje mi się wytrwać w zapoznawaniu się z programowaniem funkcyjnym. Niesłusznie stosuję metodę zero-jedynkowe - ***"Albo wszystko będę pisał funkcyjnie, albo nie ma sensu zagłębiać się w temat"***. Prezentacja ta uświadomiła mi, że wcale nie musi tak być. **F#** jest językiem funkcyjnym, ale wspiera też elementy obiektowe. Nie ma żadnych przeciwwskazań, aby używać tych drugich, w miejscach, w których wspomogą one realizację rozwiązania. Ważne, aby rozróżniać programowanie obiektowe od programowania zorientowanego obiektowo i ograniczać używanie tego ostatniego jak tylko się da.
+Zdałem sobie sprawę, jaka jest przyczyna tego, że nie udaje mi się wytrwać w zapoznawaniu się z programowaniem funkcyjnym. Niesłusznie stosuję metodę zero-jedynkową - ***"Albo wszystko będę pisał funkcyjnie, albo nie ma sensu zagłębiać się w temat"***. Prezentacja ta uświadomiła mi, że wcale nie musi tak być. **F#** jest językiem funkcyjnym, ale wspiera też elementy obiektowe. Nie ma żadnych przeciwwskazań, aby używać tych drugich, w miejscach, w których wspomogą one realizację rozwiązania. Ważne, aby rozróżniać programowanie obiektowe od programowania zorientowanego obiektowo i ograniczać używanie tego ostatniego jak tylko się da.
 
 Składając wszystko razem w jedną całość, postanowiłem napisać serię artykułów łączących wiedzę na temat mojego ulubionego frameworka **NServiceBus** z nauką języka **F#**. Zapraszam Cię do przejścia przez tę serię razem ze mną. Mam nadzieję, że będzie ona dla Ciebie wartościowa.
 
