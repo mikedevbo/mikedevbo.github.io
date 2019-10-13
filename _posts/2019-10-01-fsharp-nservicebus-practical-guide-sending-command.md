@@ -9,7 +9,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Wprowadzenie][1]
 * [F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa][2]
 * [F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy][14]
-* F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów
+* [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][15]
 * F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń
 * F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga
 
@@ -278,6 +278,7 @@ W następnym artykule do naszych funkcjonalności dołożymy nowy **Endpoint**, 
 [12]: https://jimmybogard.com/immutability-in-message-types/ "immutability-in-message=types"
 [13]: https://github.com/mikedevbo/fsharp-nservicebus "fsharp-nservicebus"
 [14]: {{ site.url }}{% link _posts/2019-10-01-fsharp-nservicebus-practical-guide-sending-command.md %}
+[15]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
 
 {{ site.mark_post_as_end }}
 
