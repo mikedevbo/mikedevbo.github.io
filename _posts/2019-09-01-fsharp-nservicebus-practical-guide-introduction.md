@@ -10,7 +10,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa][27]
 * [F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy][28]
 * [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][29]
-* F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń
+* [F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń][30]
 * F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga
 
 Kiedy siadasz do napisania kawałka funkcjonalności, czy zadajesz sobie pytanie, w jaki sposób ułożyć kod, aby daną funkcjonalność zrealizować? Pisząc w paradygmacie obiektowym, zastanawiasz się, ile klas utworzyć? Jakie powinny być powiązania pomiędzy poszczególnymi klasami? Jaki rozmiar powinna mieć klasa, żeby kod w niej zawarty był łatwy w utrzymaniu, a także gotowy na ewentualne przyszłe zmiany? Zgaduję, że w 90% na wszystkie te pytania odpowiedź brzmi **TAK**. Dwie najbardziej popularne techniki, które pomogą Ci w podjęciu decyzji i wyborze rozwiązania to [Wzorce projektowe][0] oraz zasady [SOLID][1]. Na wyższym poziomie projektowania będą to [Wzorce aplikacyjne][2]. W moim przypadku okazywały się one bardzo skuteczne. O kilku z nich pisałem w artykule [Wytwarzanie oprogramowania II - techniki programowania][3].
@@ -283,6 +283,7 @@ Składając wszystko razem w jedną całość, postanowiłem napisać serię ar
 [27]: {{ site.url }}{% link _posts/2019-09-16-fsharp-nservicebus-practical-guide-endpoint-configuration.md %}
 [28]: {{ site.url }}{% link _posts/2019-10-01-fsharp-nservicebus-practical-guide-sending-command.md %}
 [29]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
+[30]: {{ site.url }}{% link _posts/2019-11-11-fsharp-nservicebus-practical-guide-publishing-events.md %}
 
 {{ site.mark_post_as_end }}
 
