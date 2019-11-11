@@ -102,7 +102,7 @@ Wysyłając wiadomość typu **Command** musimy podać adres **Endpointa** na ja
 6. uaktualnij paczkę Nuget **FSharp.Core** w projekcie **Billing**
 7. dodaj referencję do projektu **Messages**
 8. dodaj do pliku **Program.fs** kod konfiguracji oraz uruchamiania **Endpointa**
-    * możesz wzorować się na kodzie tworzenia Endpointa **Sales** z [poprzedniego artykułu][12]
+    * możesz wzorować się na kodzie tworzenia Endpointa **Sales** z [poprzedniego artykułu][15]
     * ustaw value **endpointName** na **Billing**
 9. dodaj do projektu plik **Handlers.fs**
 10. dodaj do pliku **Handlers.fs** poniższy kod
