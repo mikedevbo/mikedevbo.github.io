@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][14]
 * [F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń][15]
 * [F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga][16]
-* F# & NServiceBus - praktyczny przewodnik: Zakończenie
+* [F# & NServiceBus - praktyczny przewodnik: Zakończenie][17]
 
 Witam Cię w szóstej części przewodnika, w którym pokazuję, w jaki sposób zaprogramować funkcjonalności dla **Retail E-commerce System** wykorzystując do tego framework **NServiceBus** oraz język **F#**.
 
@@ -427,6 +427,7 @@ W tym miejscu planowałem podsumować całą serię, natomiast postanowiłem zro
 [14]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
 [15]: {{ site.url }}{% link _posts/2019-11-11-fsharp-nservicebus-practical-guide-publishing-events.md %}
 [16]: {{ site.url }}{% link _posts/2019-12-15-fsharp-nservicebus-practical-guide-configure-and-use-saga.md %}
+[17]: {{ site.url }}{% link _posts/2019-12-22-fsharp-nservicebus-practical-guide-ending.md %}
 
 {{ site.mark_post_as_end }}
 

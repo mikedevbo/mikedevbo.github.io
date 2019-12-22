@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][9]
 * [F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń][10]
 * [F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga][11]
-* F# & NServiceBus - praktyczny przewodnik: Zakończenie
+* [F# & NServiceBus - praktyczny przewodnik: Zakończenie][12]
 
 [W poprzednim artykule][1] opisałem motywy stojące za powstaniem niniejszej serii. Jeśli chcesz się dowiedzieć dlaczego **F#** oraz dlaczego **NServiceBus**, zachęcam Cię do jego przeczytania.
 
@@ -263,6 +263,7 @@ W następnym artykule pokażę Ci, w jaki sposób stworzyć nowy message, a tak�
 [9]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
 [10]: {{ site.url }}{% link _posts/2019-11-11-fsharp-nservicebus-practical-guide-publishing-events.md %}
 [11]: {{ site.url }}{% link _posts/2019-12-15-fsharp-nservicebus-practical-guide-configure-and-use-saga.md %}
+[12]: {{ site.url }}{% link _posts/2019-12-22-fsharp-nservicebus-practical-guide-ending.md %}
 
 {{ site.mark_post_as_end }}
 

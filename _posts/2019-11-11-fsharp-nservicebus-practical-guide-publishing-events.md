@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][15]
 * [F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń][16]
 * [F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga][17]
-* F# & NServiceBus - praktyczny przewodnik: Zakończenie
+* [F# & NServiceBus - praktyczny przewodnik: Zakończenie][18]
 
 Powoli zbliżamy się do końca niniejszej serii. Jednak zanim to nastąpi, przejdziemy jeszcze przez dwa zagadnienia. W tym artykule zajmiemy się kolejnym typem wiadomości obsługiwanym przez framework **NServiceBus**, a mianowicie **Zdarzeniami**. Tak jak w poprzednio, tak i teraz kontynuujemy rozbudowę **Retail E-commerce System**. Jeśli masz swój kod napisany na bazie poprzednich części, możesz go dalej rozwijać. Jeśli nie posiadasz swojego kodu, możesz pobrać przykład, który udostępniam na moim [GitHubie][1].
 
@@ -169,6 +169,7 @@ Tutorial ze strony frameworka **NServiceBus** zawiera [część][10] dotyczącą
 [15]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
 [16]: {{ site.url }}{% link _posts/2019-11-11-fsharp-nservicebus-practical-guide-publishing-events.md %}
 [17]: {{ site.url }}{% link _posts/2019-12-15-fsharp-nservicebus-practical-guide-configure-and-use-saga.md %}
+[18]: {{ site.url }}{% link _posts/2019-12-22-fsharp-nservicebus-practical-guide-ending.md %}
 
 {{ site.mark_post_as_end }}
 

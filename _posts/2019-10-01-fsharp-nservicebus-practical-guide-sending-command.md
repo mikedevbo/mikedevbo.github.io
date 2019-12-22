@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów][15]
 * [F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń][16]
 * [F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga][17]
-* F# & NServiceBus - praktyczny przewodnik: Zakończenie
+* [F# & NServiceBus - praktyczny przewodnik: Zakończenie][18]
 
 Z [poprzedniego artykułu][2] wiesz, w jaki sposób skonfigurować oraz wystartować **Endpoint NServiceBusa**. Utworzony kod będzie Ci potrzebny do kontynuowania ćwiczeń z tego artykułu, w którym przejdziemy przez utworzenie, wysyłanie oraz przetworzenie **wiadomości**.
 
@@ -282,6 +282,7 @@ W następnym artykule do naszych funkcjonalności dołożymy nowy **Endpoint**, 
 [15]: {{ site.url }}{% link _posts/2019-10-13-fsharp-nservicebus-practical-guide-multiple-endpoints.md %}
 [16]: {{ site.url }}{% link _posts/2019-11-11-fsharp-nservicebus-practical-guide-publishing-events.md %}
 [17]: {{ site.url }}{% link _posts/2019-12-15-fsharp-nservicebus-practical-guide-configure-and-use-saga.md %}
+[18]: {{ site.url }}{% link _posts/2019-12-22-fsharp-nservicebus-practical-guide-ending.md %}
 
 {{ site.mark_post_as_end }}
 
