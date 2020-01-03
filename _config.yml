@@ -20,7 +20,7 @@ description: o wytwarzaniu oprogramowania
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mikedevbo
-github_username:  mikedebbo
+github_username:  mikedevbo
 mark_post_as_end: =
 comments: Komentarze
 
