@@ -115,4 +115,5 @@ Co by się nie działo, mam nadzieję, że to, co uda mi się stworzyć, w jaki�
 [12]: https://fsharpforfunandprofit.com/posts/property-based-testing/ "property-based-testing"
 [13]: https://azure.microsoft.com/en-us/services/service-bus/ "azure service bus"
 [14]: https://docs.microsoft.com/en-us/azure/storage/queues/ "azure storage queues"
-[15]: https://fake.build/ "fake build"
+[15]: https://fake.build/ "fake build"begin-**Paweł S**-Fajnie, fajnie, podsumowanie jak i plany zacne. Tak sobie myślę, a może by Ci pomóc ogarnąc frontend? Bo mnie to w tę stronę trochę znosi, choć bardziej podchodzę do tego jak fullstack.
+Taka luźna propo. :)-2020-01-22 12:59 UTC
