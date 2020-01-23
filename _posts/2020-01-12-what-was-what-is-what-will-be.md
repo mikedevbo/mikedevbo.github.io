@@ -101,6 +101,26 @@ Co by się nie działo, mam nadzieję, że to, co uda mi się stworzyć, w jaki�
 
 ### {{ site.comments }}
 
+**Paweł S**
+
+Fajnie, fajnie, podsumowanie jak i plany zacne. Tak sobie myślę, a może by Ci pomóc ogarnąc frontend? Bo mnie to w tę stronę trochę znosi, choć bardziej podchodzę do tego jak fullstack.
+Taka luźna propo. :)
+
+2020-01-22 12:59 UTC
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+Paweł dzięki za komentarz. Dzięki, że wpis Ci się podoba :)
+
+Co do pomocy w ogarnięciu frontendu to bardzo chętnie. Tak mi chodzi po głowie, żeby zacząć od rozwiązania, gdzie można wpinać UI w backend, czyli pobierać różne template'y i kodować na nich zachowanie. Coś takiego ma [Jekyll](https://jekyllrb.com/).
+
+Jak znasz takie rozwiązanie dla .NET, będę wdzięczny za podzielnie się informacją.
+
+2020-01-23 10:57 UTC
+
 [1]: {{ site.url }}/assets/2020_was_is_will_be/what_was.svg
 [2]: {{ site.url }}/assets/2020_was_is_will_be/what_is.svg
 [3]: {{ site.url }}/assets/2020_was_is_will_be/what_will_be.svg
@@ -115,5 +135,4 @@ Co by się nie działo, mam nadzieję, że to, co uda mi się stworzyć, w jaki�
 [12]: https://fsharpforfunandprofit.com/posts/property-based-testing/ "property-based-testing"
 [13]: https://azure.microsoft.com/en-us/services/service-bus/ "azure service bus"
 [14]: https://docs.microsoft.com/en-us/azure/storage/queues/ "azure storage queues"
-[15]: https://fake.build/ "fake build"begin-**Paweł S**-Fajnie, fajnie, podsumowanie jak i plany zacne. Tak sobie myślę, a może by Ci pomóc ogarnąc frontend? Bo mnie to w tę stronę trochę znosi, choć bardziej podchodzę do tego jak fullstack.
-Taka luźna propo. :)-2020-01-22 12:59 UTC
+[15]: https://fake.build/ "fake build"
