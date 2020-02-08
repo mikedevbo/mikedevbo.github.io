@@ -99,6 +99,8 @@ Kończąc, powrócę do pierwszego zdania z tej sekcji. Na dzień, w którym pub
 
 Co by się nie działo, mam nadzieję, że to, co uda mi się stworzyć, w jakiś sposób pomoże również Tobie, zarówno w kwestiach wytwarzanego oprogramowania, jak i ścieżce rozwoju technologicznego.
 
+{{ site.mark_post_as_end }}
+
 ### {{ site.comments }}
 
 **Paweł S**
