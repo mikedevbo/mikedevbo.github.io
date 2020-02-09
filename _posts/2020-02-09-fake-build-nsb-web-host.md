@@ -53,7 +53,7 @@ Do powyższego schematu możemy dodawać elementy opcjonalne np. backup aktualne
 
 Pisząc w języku **F#** mamy możliwość uruchamiania kodu w tzw. [trybie interaktywnym][13]. Oznacza to, że nie musimy tworzyć projektów ***.csproj**. W **Visual Studio** kod możemy pisać oraz uruchamiać w oknie **F# Interactive**. Możemy też dodać implementację do pliku z rozszerzeniem **.fsx**, a następnie uruchomić program z wiersza poleceń za pomocą narzędzia **fsi.exe**.
 
-**FAKE** umożliwia uruchamianiem kodu napisanego w plikach **.fsx**. Zobaczmy, w jaki sposób możemy zakodować prototyp skryptu wdrożeniowego np. w pliku o nazwie **host_ftp_deploy.fsx**:
+**FAKE** umożliwia uruchamianie kodu napisanego w plikach **.fsx**. Zobaczmy, w jaki sposób możemy zakodować prototyp skryptu wdrożeniowego np. w pliku o nazwie **host_ftp_deploy.fsx**:
 
 {% highlight fsharp %}
 #r "paket:
@@ -213,7 +213,7 @@ Target.create "Stop Endpoint" (fun _ ->
 )
 {% endhighlight %}
 
-Przejdźmy przez powyższy kod, zaczynają analizę od końca. Najpierw sprawdzamy stan **Endpointa** poprzez wywołanie zakodowanej lokalnej funkcji `getEndpointState`. Jeśli **Endpoint** nie istnieje lub jest już zatrzymany, to nie robimy nic. Jeśli jest uruchomiony, to wywołujemy zakodowaną lokalną funkcję `stopEndpoint`, która zatrzyma **Endpoint**. W lokalnych funkcjach używany wcześniej zdefiniowanej funkcji `makeFtpAction`. Na przykład:
+Przejdźmy przez powyższy kod, zaczynając analizę od końca. Najpierw sprawdzamy stan **Endpointa** poprzez wywołanie zakodowanej lokalnej funkcji `getEndpointState`. Jeśli **Endpoint** nie istnieje lub jest już zatrzymany, to nie robimy nic. Jeśli jest uruchomiony, to wywołujemy zakodowaną lokalną funkcję `stopEndpoint`, która zatrzyma **Endpoint**. W lokalnych funkcjach używany wcześniej zdefiniowanej funkcji `makeFtpAction`. Na przykład:
 
 * `makeFtpAction (fun ftp -> ftp.EnumerateRemoteFiles(ftpEndpointPath, null, EnumerationOptions.None`
     * pobranie listy plików ze zdalnego zasobu
@@ -342,7 +342,7 @@ Dzięki parametrom możemy użyć tego samego skryptu przy wdrożeniach na róż
 * **run_deploy_test.ps1**
 * **run_deploy_production.ps1**
 
-Kiedy natrafiłem na **FAKEa**, od razu zainteresowałem się jego możliwościami. Pisanie kodu dla funkcjonalności oraz kodu wdrażającego w tym samym języku z użyciem tych samych narzędzi developerskich mocno upraszcza cały proces wytwarzania oprogramowania. Podejście funkcyjne, kompilacja kodu, Intellisense, obsługa **Nugeta** itp. znacząco zwiększa komfort podczas pracy nad skryptem. Dodatkowym bonusem jest frajda z pisania kodu w **F#**, a następnie obserwowanie jak napisany kod działa i robi to, co ma robić :)
+Kiedy natrafiłem na **FAKEa**, od razu zainteresowałem się jego możliwościami. Pisanie kodu dla funkcjonalności oraz kodu wdrażającego w tym samym języku z użyciem tych samych narzędzi developerskich mocno upraszcza cały proces wytwarzania oprogramowania. Podejście funkcyjne, kompilacja kodu, Intellisense, obsługa **Nugeta** itp. znacząco zwiększa komfort pracy nad skryptem. Dodatkowym bonusem jest frajda z pisania kodu w **F#**, a następnie obserwowanie jak napisany kod działa i robi to, co ma robić :)
 
 W następnym artykule przejdziemy przez funkcjonalność wdrażania aplikacji webowej obsługującej żądania **HTTP**.
 
