@@ -366,4 +366,4 @@ W następnym artykule przejdziemy przez funkcjonalność wdrażania aplikacji we
 [14]: https://winscp.net/eng/docs/library "WinSCP"
 [15]: https://github.com/mikedevbo/blog-comments/tree/master/src/Deployment "BlogComments Deployment"
 [16]: https://www.nuget.org/ "Nuget"
-[17]: {{ site.url }}{% link _posts/2020-02-09-fake-build-nsb-web-host.md %}
+[17]: {{ site.url }}{% link _posts/2020-02-09-fake-build-nsb-web-host.md %}begin-**test**-test-2020-02-16 18:29 UTC
