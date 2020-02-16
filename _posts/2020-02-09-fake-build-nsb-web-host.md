@@ -7,7 +7,8 @@ date:   2020-02-09
 Posty z tej serii:
 
 * [Fake it... ale nie tak jak myślisz - NServiceBus Web Host][17]
-* Fake it... ale nie tak jak myślisz - ASP.NET Web Host
+* [Fake it... ale nie tak jak myślisz - ASP.NET Web Host][18]
+* Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host
 
 Jakie jest twoje pierwsze skojarzenie z frazę ***Fake it*** w kontekście wytwarzania oprogramowania? U mnie jest to**/**było Fakeowanie zależności w celu [jednostkowego przetestowania][1] konkretnego kawałka funkcjonalności. Przykłady zależności? Warstwa dostępu do bazy danych, zależność do zewnętrznego serwisu lub do systemu plików. W skrócie, każda zależność do zasobu, który trzeba przygotować przed uruchomieniem testu. Fakeując taki zasób, symulujemy jego istnienie, wykorzystując do tego pamięć operacyjną maszyny na której uruchamiany jest test. Z takim podejściem związana jest [cała filozofia][2], która definiuje pojęcia, nazwy, sposób zastosowania, itd. W wersji uproszczonej, chodzi o możliwość jednostkowego testowania logiki biznesowej w oderwaniu od zewnętrznych zależności. A czy istnieją biblioteki, wspomagające w realizacji takiego podejścia? Tak? A jakie? A proszę bardzo:
 
@@ -367,3 +368,4 @@ W następnym artykule przejdziemy przez funkcjonalność wdrażania aplikacji we
 [15]: https://github.com/mikedevbo/blog-comments/tree/master/src/Deployment "BlogComments Deployment"
 [16]: https://www.nuget.org/ "Nuget"
 [17]: {{ site.url }}{% link _posts/2020-02-09-fake-build-nsb-web-host.md %}
+[18]: {{ site.url }}{% link _posts/2020-02-16-fake-build-web-host.md %}
