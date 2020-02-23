@@ -8,7 +8,8 @@ Posty z tej serii:
 
 * [Fake it... ale nie tak jak myślisz - NServiceBus Web Host][17]
 * [Fake it... ale nie tak jak myślisz - ASP.NET Web Host][18]
-* Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host
+* [Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host][19]
+* Fake it... ale nie tak jak myślisz - Build - Run Unit tests - Publish
 
 Jakie jest twoje pierwsze skojarzenie z frazę ***Fake it*** w kontekście wytwarzania oprogramowania? U mnie jest to**/**było Fakeowanie zależności w celu [jednostkowego przetestowania][1] konkretnego kawałka funkcjonalności. Przykłady zależności? Warstwa dostępu do bazy danych, zależność do zewnętrznego serwisu lub do systemu plików. W skrócie, każda zależność do zasobu, który trzeba przygotować przed uruchomieniem testu. Fakeując taki zasób, symulujemy jego istnienie, wykorzystując do tego pamięć operacyjną maszyny na której uruchamiany jest test. Z takim podejściem związana jest [cała filozofia][2], która definiuje pojęcia, nazwy, sposób zastosowania, itd. W wersji uproszczonej, chodzi o możliwość jednostkowego testowania logiki biznesowej w oderwaniu od zewnętrznych zależności. A czy istnieją biblioteki, wspomagające w realizacji takiego podejścia? Tak? A jakie? A proszę bardzo:
 
@@ -180,7 +181,7 @@ Target.create "Stop Endpoint" (fun _ ->
     let offline = sprintf @"%s/%s" ftpEndpointPath ftpOfflineHtm
     let online = sprintf @"%s/%s" ftpEndpointPath ftpOnlineHtm
 
-    let getEndpointState =
+    let getEndpointState () =
         let isDirectoryEmpty = makeFtpAction (fun ftp -> ftp.EnumerateRemoteFiles(ftpEndpointPath, null, EnumerationOptions.None) |> Seq.isEmpty)
         match isDirectoryEmpty with
         | true -> NotExists
@@ -190,7 +191,7 @@ Target.create "Stop Endpoint" (fun _ ->
             | true -> Stopped
             | false -> Running
 
-    let stopEndpoint =
+    let stopEndpoint () =
         makeFtpAction (fun ftp -> ftp.MoveFile(offline, online))
         try
             Trace.trace ("-> Call URL " + endpointUrl)
@@ -209,7 +210,7 @@ Target.create "Stop Endpoint" (fun _ ->
     | Stopped -> Trace.trace (sprintf "-> Endpoint %s is already stopped." ftpEndpointPath)
     | Running ->
         Trace.trace ("-> Stop Endpoint " + ftpEndpointPath)
-        stopEndpoint
+        stopEndpoint ()
         Trace.trace (sprintf "-> Endpoint %s stopped successfully." ftpEndpointPath)
 )
 {% endhighlight %}
@@ -369,3 +370,4 @@ W następnym artykule przejdziemy przez funkcjonalność wdrażania aplikacji we
 [16]: https://www.nuget.org/ "Nuget"
 [17]: {{ site.url }}{% link _posts/2020-02-09-fake-build-nsb-web-host.md %}
 [18]: {{ site.url }}{% link _posts/2020-02-16-fake-build-web-host.md %}
+[19]: {{ site.url }}{% link _posts/2020-02-23-fake-build-nsb-ws-host.md %}
