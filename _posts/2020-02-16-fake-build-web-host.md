@@ -9,7 +9,7 @@ Posty z tej serii:
 * [Fake it... ale nie tak jak myślisz - NServiceBus Web Host][5]
 * [Fake it... ale nie tak jak myślisz - ASP.NET Web Host][9]
 * [Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host][10]
-* Fake it... ale nie tak jak myślisz - Build - Run Unit tests - Publish
+* [Fake it... ale nie tak jak myślisz - Build - Run Unit tests - Publish][11]
 
 W poprzednim artykule przeszliśmy przez funkcjonalność wdrażania aplikacji webowej, której jedynym zadaniem jest hostowanie **Endpointa NServiceBus**. W kontekście [Systemu komentarzy na blogu][1] wdrażany **Endpoint** jest właścicielem komponentu przetwarzającego dodane komentarze. System posiada też drugi komponent, który przyjmuje komentarze od użytkowników, a następnie wysyła je do wcześniej wspomnianego **Endpointa**. Komponent ten hostowany jest w osobnej aplikacji webowej napisanej we frameworku [ASP.NET][2] w połączeniu z frameworkiem [NancyFx][3]. Dodanie komentarza odbywa się poprzez obsługę żądania **HTTP**. **ASP.NET** przyjmuje żądanie, przekierowuje je do modułu **NancyFx**, który wysyła **Message** do **Endpointa** zawierającego obsługę komentarza.
 
@@ -155,3 +155,4 @@ To tyle, jeśli chodzi o funkcjonalność wdrażania aplikacji webowej obsługuj
 [8]: https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/fsharp-interactive/ "FSharp Interactive"
 [9]: {{ site.url }}{% link _posts/2020-02-16-fake-build-web-host.md %}
 [10]: {{ site.url }}{% link _posts/2020-02-23-fake-build-nsb-ws-host.md %}
+[11]: {{ site.url }}{% link _posts/2020-03-01-fake-build-build-test-publish.md %}

@@ -9,7 +9,7 @@ Posty z tej serii:
 * [Fake it... ale nie tak jak myślisz - NServiceBus Web Host][1]
 * [Fake it... ale nie tak jak myślisz - ASP.NET Web Host][7]
 * [Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host][8]
-* Fake it... ale nie tak jak myślisz - Build - Run Unit tests - Publish
+* [Fake it... ale nie tak jak myślisz - Build - Run Unit tests - Publish][9]
 
 Po [przeniesieniu na Web Hosting ][1] komponentu odpowiedzialnego za przetwarzanie komentarzy, zastanawiałem się co zrobić z funkcjonalnością wdrażania **Endpointa NServiceBus** jako **Windows Service**. Rozważałem trzy opcje:
 
@@ -142,3 +142,4 @@ W tym krótkim artykule przeszliśmy przez możliwość wdrażania artefaktów j
 [6]: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21 "dotnet publish"
 [7]: {{ site.url }}{% link _posts/2020-02-16-fake-build-web-host.md %}
 [8]: {{ site.url }}{% link _posts/2020-02-23-fake-build-nsb-ws-host.md %}
+[9]: {{ site.url }}{% link _posts/2020-03-01-fake-build-build-test-publish.md %}
