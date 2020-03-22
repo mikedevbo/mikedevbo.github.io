@@ -593,6 +593,7 @@ Szybki dostęp:
 * [Dapper](#dapper)
 * [Simple.Data](#simpledata)
 * [Entity Framework](#entity-framework)
+* [FSharp.Data.SqlClient][18] - Update - 2020-03-22
 
 [1]: https://www.microsoft.com/en-us/sql-server/ "MS SQL Server"
 [2]: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ "ADO.NET"
@@ -611,6 +612,7 @@ Szybki dostęp:
 [15]: https://docs.microsoft.com/en-us/dotnet/csharp/ "CSharp language"
 [16]: https://docs.microsoft.com/en-us/dotnet/ "DotNet framework"
 [17]: https://github.com/mikedevbo/data-access "data-access"
+[18]: {{ site.url }}{% link _posts/2020-03-22-sixth-way-of-communication-with-relational-database.md %}
 
 {{ site.mark_post_as_end }}
 
