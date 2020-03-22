@@ -14,7 +14,7 @@ Zanim przejdziemy do szczegółów, pozwól, że nakreślę Ci pewien kontekst. 
 
 W kontekście operacji na relacyjnej bazie danych **MS SQL Server**, w pierwszym przypadku zapewne rozważysz wykorzystanie któregoś z frameworków **ORM** np. [Entity Framework][4]. W drugim przypadku możesz chcieć sięgnąć po coś "lżejszego" np. [Dapper'a][5].
 
-Nic nie stoi na przeszkodzie, aby odwrócić wybór. W pierwszym przypadku zrezygnować z **ORM'a**, dojdzie Ci wtedy dodatkowy kod do napisania. W drugim przypadku sięgnąć po **ORMa'**, ale...możesz nie mieć modelu, wtedy "na siłę" musisz go stworzyć!
+Nic nie stoi na przeszkodzie, aby odwrócić wybór. W pierwszym przypadku zrezygnować z **ORM'a**, dojdzie Ci wtedy dodatkowy kod do napisania. W drugim przypadku sięgnąć po **ORM'a**, ale...możesz nie mieć modelu, wtedy "na siłę" musisz go stworzyć!
 
 W moim przypadku podejście nr 1. nigdy się nie sprawdziło, natomiast podejście nr 2. zaskoczyło momentalnie, zwłaszcza wtedy, kiedy zacząłem realizować funkcjonalności na podstawie stylu architektonicznego [Message Queuing][6]. W podejściu tym komponent zawierający **Message Handler** odpowiedzialny jest za realizację konkretnego kawałka funkcjonalności. Przykład przetwarzania **Message'a** wygląda mniej więcej tak:
 
@@ -110,7 +110,7 @@ Trzy pierwsze właściwości, na które warto zwrócić uwagę to:
 {:start="3"}
 3. Kod jest w pełni kompilowany, ale uwaga, nie tylko języka **F#**, ale też języka **T-SQL**! Dodatkowo biblioteka wykrywa nazwy parametrów wejściowych oraz nazwy zwracanych pól, weryfikując je na poziomie kompilacji kodu. Zobaczmy, jak to wygląda w **Visual Studio**:
 
-[![Picutre1][9]][9]
+[![Picture1][9]][9]
 
 Nie wiem jak u Ciebie, ale u mnie wywołało to efekt WOW!
 
@@ -134,7 +134,7 @@ let Handler message =
 
 Value `playerInfo` posiada typ, wygenerowany przez `FSharp.Data.SqlClient`. Podpowiadanie składni działa bez zarzutu:
 
-[![Picutre2][10]][10]
+[![Picture2][10]][10]
 
 A jak może wyglądać implementacja zmiany stanu w bazie danych? Zobaczmy to na przykładzie operacji **insert**:
 
