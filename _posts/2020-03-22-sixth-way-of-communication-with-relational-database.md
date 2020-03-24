@@ -104,7 +104,7 @@ Trzy pierwsze właściwości, na które warto zwrócić uwagę to:
     * Typ generowany jest automatycznie na podstawie danych zwracanych w zapytaniu **SQL**!:
 
     {% highlight fsharp %}
-    Option<SqlCommandProvider<...>Record>
+    Option<SqlCommandProvider<...>.Record>
     {% endhighlight %}
 
 {:start="3"}
