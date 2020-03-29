@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Wysłanie komendy"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o tym, jak używając języka F# można zaprogramować tworzenie, wysyłanie oraz przetwarzanie wiadomości typu Command.
 date:   2019-10-01
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "System komentarzy do bloga I - Design"
+description: Wytwarzanie oprogramowania w czterech etapach. W tym artykule przeczytasz, w jaki sposób można zaprojektować rozwiązanie.
 date:   2018-03-11
 ---
 

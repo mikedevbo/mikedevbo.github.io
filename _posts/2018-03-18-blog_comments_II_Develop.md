@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "System komentarzy do bloga II - Develop"
+description: Wytwarzanie oprogramowania w czterech etapach. W tym artykule przeczytasz, w jaki sposób można zaprogramować rozwiązanie.
 date:   2018-03-18
 ---
 

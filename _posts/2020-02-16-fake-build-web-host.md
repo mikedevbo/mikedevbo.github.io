@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fake it... ale nie tak jak myślisz - ASP.NET Web Host"
+description: W odróżnieniu od aplikacji webowej hostującej Endpointa NServiceBus nie możemy tak po prostu wyłączyć aplikacji webowej obsługującej żądania HTTP. Wdrożenie trwa jakiś czas. Polega na usuwaniu aktualnych artefaktów oraz wgrywaniu nowych. W kontekście systemu komentarzy na blogu, w trakcie wdrożenia użytkownik nie mógłby dodawać komentarzy. Jedną ze strategi poradzenia sobie z taką sytuacją jest zastosowanie strategii Blue-Green-Deployment.
 date:   2020-02-16
 ---
 

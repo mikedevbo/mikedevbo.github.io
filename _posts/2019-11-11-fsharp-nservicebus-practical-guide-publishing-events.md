@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Publikowanie zdarzeń"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o tym, jak używając języka F# można zaprogramować publikowanie wiadomości typu Event.
 date:   2019-11-11
 ---
 

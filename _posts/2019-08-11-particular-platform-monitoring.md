@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Monitoring z Particular Service Platform"
+description: Sprawdź w jaki sposób NServiceBus, ServiceControl, ServicePulse oraz ServiceInsight wspomagają monitorowanie wdrożonych komponentów.
 date:   2019-08-11
 ---
 

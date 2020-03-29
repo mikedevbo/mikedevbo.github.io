@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Wytwarzanie oprogramowania IV - NServiceBus - framework, który zmienia zasady gry"
+description: No więc wprowadziliśmy zmianę do systemu, wszystkie fazy testów przeszły, zmiana została wdrożona i... przy próbie wprowadzania danych przez użytkowników zaczynają "spływać" błędy.
 date:   2017-04-29
 ---
 Posty z tej serii:

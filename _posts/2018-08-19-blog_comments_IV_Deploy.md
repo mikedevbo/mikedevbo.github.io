@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "System komentarzy do bloga IV - Deploy"
+description: Wytwarzanie oprogramowania w czterech etapach. W tym artykule przeczytasz, w jaki sposób można wdrożyć zaprogramowane funkcjonalności.
 date:   2018-08-19
 ---
 

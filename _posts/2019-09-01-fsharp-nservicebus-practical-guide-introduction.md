@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Wprowadzenie"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o motywach stojących za powstaniem serii, która pokazuje, w jaki sposób można zaprogramować różne funkcjonalności frameworka NServiceBus w języku F#.
 date:   2019-09-01
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Konfiguracja Endpointa"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o tym, w jaki sposób skonfigurować oraz uruchomić Endpoint pisząc kod w języku F#.
 date:   2019-09-16
 ---
 

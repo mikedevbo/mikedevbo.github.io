@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Komunikacja wielu Endpointów"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o tym, w jaki sposób skomunikować ze sobą dwa Endpointy pisząc kod w języku F#.
 date:   2019-10-13
 ---
 

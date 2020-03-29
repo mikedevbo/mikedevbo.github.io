@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fake it... ale nie tak jak myślisz - NServiceBus Windows Service Host"
+description: Po przeniesieniu na Web Hosting komponentu odpowiedzialnego za przetwarzanie komentarzy, zastanawiałem się co zrobić z funkcjonalnością wdrażania Endpointa NServiceBus jako Windows Service. Rozważałem trzy opcje
 date:   2020-02-23
 ---
 

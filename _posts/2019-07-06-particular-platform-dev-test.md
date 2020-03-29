@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Develop and Test z Particular Service Platform"
+description: Sprawdź w jaki sposób NServiceBus, ServiceControl, ServicePulse oraz ServiceInsight wspomagają wytwarzanie oprogramowanie na etapach Develop, oraz Test.
 date:   2019-07-06
 ---
 

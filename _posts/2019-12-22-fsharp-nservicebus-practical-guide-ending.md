@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Zakończenie"
+description: F# oraz NServiceBus. Czy to możliwe? Podsumowanie serii, Wnioski, przemyślenia, ...
 date:   2019-12-22
 ---
 

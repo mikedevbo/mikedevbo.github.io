@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "System komentarzy do bloga III - Test"
+description: Wytwarzanie oprogramowania w czterech etapach. W tym artykule przeczytasz, w jaki sposób można przetestować zaprogramowane funkcjonalności.
 date:   2018-03-30
 ---
 

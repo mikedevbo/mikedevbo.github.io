@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Wytwarzanie oprogramowania II - techniki programowania"
+description: Drugi wpis z serii „Wytwarzanie oprogramowania” zawiera przegląd wybranych technik programistycznych pozwalających dostarczać ciut lepszej jakości programy. Wszystkie przykłady napisane są w języku `C#` i dotyczą paradygmatu programowania obiektowego.
 date:   2017-02-25
 ---
 Posty z tej serii:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  ".NET Core - pierwsze starcie"
+description: Gdzieś kiedyś przeczytałem/usłyszałem _"Idziesz na informatykę? Całe życie będziesz się uczył!"_. Po X latach działania w branży IT śmiało mogę powiedzieć, że to stwierdzenie jest jak najbardziej prawdziwe. Świat technologii zmienia się bardzo szybko. Nowe języki programowania, nowe biblioteki, nowe frameworki, nowe koncepcje wytwarzania oprogramowania.
 date:   2019-04-14
 ---
 

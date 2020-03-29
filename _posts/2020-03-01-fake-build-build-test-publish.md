@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fake it... ale nie tak jak myślisz - Build - Run Unit Tests - Publish"
+description: Wdrażanie i wdrażanie. A co z przygotowaniem kodu do wdrożenia? Przeczytaj o tym, w jaki sposób FAKE wspomaga realizację tego typu funkcjonalności.
 date:   2020-03-01
 ---
 

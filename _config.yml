@@ -14,9 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Design Develop Test Deploy
+description: o wytwarzaniu oprogramowania
+lang: pl-PL
 author: mikedevbo
 email: mike@devbo.pl
-description: o wytwarzaniu oprogramowania
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mikedevbo
@@ -29,6 +30,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  # - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock

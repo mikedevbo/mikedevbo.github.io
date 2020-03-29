@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Wytwarzanie oprogramowania I - paradygmaty programowania"
+description: Jest to pierwszy wpis z serii, którą nazwałem "Wytwarzanie oprogramowania". W serii tej, przedstawię elementy, które pomagają mi zrozumieć, czym jest programowanie, a także elementy, które pomogły\pomagają mi w codziennej pracy, od momentu kiedy byłem młodszym programistą do teraz, kiedy jestem trochę starszym programistą ;).
 date:   2016-11-26
 ---
 

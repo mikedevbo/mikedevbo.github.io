@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "F# & NServiceBus - praktyczny przewodnik: Zarządzanie procesem biznesowym - Saga"
+description: F# oraz NServiceBus. Czy to możliwe? Przeczytaj o tym, w jaki sposób zaimplementować Sagę pisząc kod w języku F#.
 date:   2019-12-15
 ---
 

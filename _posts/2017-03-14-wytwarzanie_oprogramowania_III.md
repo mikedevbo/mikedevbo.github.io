@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Wytwarzanie oprogramowania III - architektury systemów informatycznych"
+description: Z poprzednich wpisów wiemy, jakich paradygmatów programowania oraz jakich technik programistycznych można używać w procesie wytwarzania oprogramowania. Kolejnym etapem jest połączenie tych elementów w całość i dostarczenie końcowemu użytkownikowi.
 date:   2017-03-14
 ---
 Posty z tej serii:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fake it... ale nie tak jak myślisz - NServiceBus Web Host"
+description: Jakie jest twoje pierwsze skojarzenie z frazę Fake it w kontekście wytwarzania oprogramowania? U mnie jest to/było Fakeowanie zależności w celu jednostkowego przetestowania konkretnego kawałka funkcjonalności. Przykłady zależności? Warstwa dostępu do bazy danych, zależność do zewnętrznego serwisu lub do systemu plików.
 date:   2020-02-09
 ---
 
