@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "6th sposób komunikacji z relacyjną bazą danych"
+description: Nareszcie! Po wielu latach poszukiwań, testowania wielu innych, trafiła do mnie ta jedna jedyna, która rządzi wszystkimi pozostałymi. Panie i Panowie, przedstawiam New Kid on The Block o nazwie FSharp.Data.SqlClient, bibliotekę, która umożliwia komunikację z relacyjną bazą danych MS SQL Server.
 date:   2020-03-22
 ---
 
