@@ -18,7 +18,7 @@ Jest to kurs, wokół którego buduję, a dokładniej mówiąc, poszerzam swoją
 
 W obecnej sytuacji, w której się znaleźliśmy, mamy możliwość obejrzenia nagrań z całego kursu za tzw. **free**. Po zarejestrowaniu się na stronie dostajemy dostęp na określony limitowany czas. Więcej szczegółów znajdziesz [w tym wpisie][4].
 
-Zachęcam Cię to przejścia przez kurs. Znajdziesz tam dużo wartości. Jedno tylko małe ostrzeżenie, po zapoznaniu się materiałem, świat IT nie wygląda już tak samo ;)
+Zachęcam Cię do przejścia przez kurs. Znajdziesz tam dużo wartości. Jedno tylko małe ostrzeżenie. Po zapoznaniu się materiałem, świat IT nie wygląda już tak samo ;)
 
 ## NServiceBus
 
