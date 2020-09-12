@@ -15,41 +15,53 @@
 <p><input type="text" id="userwebsite" name="userwebsite" value="" size="22" tabindex="3" placeholder="Website" /></p>
 <p><input type="text" id="userphone" name="userphone" style="display: none;"/></p>
 <p>
-  <textarea name="content" id="content" rows="10" tabindex="4" placeholder="Komentarz" style="width: 100%;"></textarea>
+  <textarea name="usercomment" id="usercomment" rows="10" tabindex="4" placeholder="Komentarz" style="width: 100%;"></textarea>
 </p>
 <button id="btn" tabindex="5">Wyślij</button><small><i><sup> beta</sup></i></small>
 
 <script>
 $("document").ready(function() {
-   $("#btn").click(postComent);
+   $("#btn").click(postComment);
 
 });
 
-function postComent(){
+function parseUserEmail(userEmail) {
+	if (userEmail === '') {
+		return null;
+	}
+
+	return userEmail;
+}
+
+function postComment(){
     $("#info").text("Wysyłanie ...");
     $.ajax({
       url : 'https://comments.devbo.pl',
-      data : {
+      data : JSON.stringify({
         username : $("#username").val(),
-        useremail : $("#useremail").val(),
+        userEmail : parseUserEmail($("#useremail").val()),
         userwebsite : $("#userwebsite").val(),
-        filename : "_posts\/" + $(location).attr("pathname").replace('/', '').replace(/\//g, '-').replace(".html", ".md"),
-        content : $("#content").val(),
+        articlefilename : "_posts\/" + $(location).attr("pathname").replace('/', '').replace(/\//g, '-').replace(".html", ".md"),
+        usercomment : $("#usercomment").val(),
         userphone : $("#userphone").val(),
-      },
+      }),
       datatype : "json",
+      contentType: "application/json",
       type : 'post',
       success : function(data, textStatus, jqXHR) {
         $("#info").text("Dziękuję, komentarz został przyjęty do realizacji.");
         $("#username").val("");
         $("#useremail").val("");
         $("#userwebsite").val("");
-        $("#content").val("");
+        $("#usercomment").val("");
       },
       error : function(jqXHR, textStatus, errorThrown) {
         try
         {
-          $("#info").text($.parseJSON(jqXHR.responseText).errors[0].errorMessage);
+          var response = $.parseJSON(jqXHR.responseText);
+			    var errorKey = Object.keys(response.errors)[0];
+			    var error = response.errors[errorKey];
+          $("#info").text(error);
         }
         catch(e)
         {
