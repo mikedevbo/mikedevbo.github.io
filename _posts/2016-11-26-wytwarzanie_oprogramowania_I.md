@@ -289,3 +289,4 @@ Z komputerem można "rozmawiać" na wiele sposobów, ale sama znajomość język
 {{ site.mark_post_as_end }}
 
 ### {{ site.comments }}
+begin-**test_user**-test_comment-2020-09-12 11:22 UTC 
