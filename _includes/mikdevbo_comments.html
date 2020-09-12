@@ -36,7 +36,7 @@ function parseUserEmail(userEmail) {
 function postComment(){
     $("#info").text("Wysyłanie ...");
     $.ajax({
-      url : 'https://comments.devbo.pl',
+      url : 'https://comments.devbo.pl/green/comment',
       data : JSON.stringify({
         username : $("#username").val(),
         userEmail : parseUserEmail($("#useremail").val()),
