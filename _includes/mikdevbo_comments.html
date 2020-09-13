@@ -21,7 +21,7 @@
 
 <script>
 $("document").ready(function() {
-   $("#btn").click(postComment);
+   $("#btn").click(startPostingComment);
 
 });
 
@@ -33,10 +33,10 @@ function parseUserEmail(userEmail) {
 	return userEmail;
 }
 
-function postComment(){
+function postComment(url){
     $("#info").text("Wysyłanie ...");
     $.ajax({
-      url : 'https://comments.devbo.pl/green/comment',
+      url : url,
       data : JSON.stringify({
         username : $("#username").val(),
         userEmail : parseUserEmail($("#useremail").val()),
@@ -69,5 +69,14 @@ function postComment(){
         }
       }
     });
+}
+
+function startPostingComment() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://comments.devbo.pl', true);
+  xhr.onload = function () {
+    postComment(xhr.responseURL);
+  };
+  xhr.send(null);
 }
 </script>
