@@ -78,4 +78,4 @@ Jeśli chcesz zobaczyć w jaki sposób język **F#** współpracuje z frameworki
 [16]: https://docs.microsoft.com/en-us/dotnet/csharp/ "C# documentation"
 [17]: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions "C# lambda expressions"
 [18]: https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/classes "F# Classes"
-[19]: {{ site.url }}{% link _posts/2019-09-01-fsharp-nservicebus-practical-guide-introduction.md %}
+[19]: {{ site.url }}{% link _posts/2019-09-01-fsharp-nservicebus-practical-guide-introduction.md %}begin-**test_user**-test_comment-2020-09-13 07:32 UTC 
