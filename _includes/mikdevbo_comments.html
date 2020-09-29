@@ -34,7 +34,6 @@ function parseUserEmail(userEmail) {
 }
 
 function postComment(url){
-    $("#info").text("Wysyłanie ...");
     $.ajax({
       url : url,
       data : JSON.stringify({
@@ -77,6 +76,12 @@ function startPostingComment() {
   xhr.onload = function () {
     postComment(xhr.responseURL);
   };
+
+  xhr.ontimeout = function (e) {
+    $("#info").text("Przepraszam, wystąpił nieoczekiwany błąd. Spróbuj ponownie później.");
+  };
+
+  $("#info").text("Wysyłanie ...");
   xhr.send(null);
 }
 </script>
