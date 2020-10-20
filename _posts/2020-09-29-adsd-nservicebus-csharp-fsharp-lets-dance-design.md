@@ -8,7 +8,7 @@ date:   2020-09-29
 Posty z tej serii:
 
 * [ADSD - NServiceBus - C# - F# - let's dance - Design][15]
-* ADSD - NServiceBus - C# - F# - let's dance - Develop
+* [ADSD - NServiceBus - C# - F# - let's dance - Develop][16]
 
 Koniec lata, początek jesieni. Jak patrzę wstecz na daty publikacji artykułów, to widzę, że okres jesienno-zimowy sprzyja mi najbardziej w pisaniu oraz publikowaniu nowych treści. Zobaczymy, jak będzie w tym sezonie :) Zapraszam Cię do przeczytania mini serii, w której pokażę Ci, jak [kwartet doskonały][1] radzi sobie w warunkach praktycznych. Przejdziemy przez zmiany, jakich dokonałem w [systemie komentarzy][2], którego używam na tym blogu. W tej części skupimy się na koncepcji oraz projekcie rozwiązania. W następnej części przejdziemy przez wybrane elementy implementacji.
 
@@ -57,3 +57,4 @@ W następnym artykule pokażę Ci, w jaki sposób połączyć kod języka [C#][1
 [13]: https://particular.net/blog/putting-your-events-on-a-diet "putting-your-events-on-a-diet"
 [14]: https://skillsmatter.com/skillscasts/2990-events-diet "2990-events-diet"
 [15]: {{ site.url }}{% link _posts/2020-09-29-adsd-nservicebus-csharp-fsharp-lets-dance-design.md %}
+[16]: {{ site.url }}{% link _posts/2020-10-20-adsd-nservicebus-csharp-fsharp-lets-dance-develop.md %}
