@@ -721,7 +721,6 @@ Jeśli chodzi o wdrażanie, to bez zarzutu sprawdza się narzędzie [Fake][9].
 
 Doszliśmy do końca mini serii, w której miałeś/miałaś okazję zobaczyć, w jaki sposób można zaprojektować rozwiązanie wg. idei zawartych w krusie [Advanced Distributed System Design][10] (ADSD), a także sposób, w jaki można taki projekt zrealizować używając frameworka [NServiceBus][11] oraz języków [C#][14] i [F#][15].
 
-
 Całość implementacji znajdziesz na moim [GitHubie][12]. Zachowałem poprzednie rozwiązania w postaci [branchy][13], aby móc analizować zmiany, jakie zachodziły w każdym kolejnym kroku rozwoju systemu.
 
 {{ site.mark_post_as_end }}
