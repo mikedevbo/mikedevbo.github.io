@@ -160,6 +160,10 @@ Ponieważ całość może znajdować się w jednej klasie, możemy uprościć k
 
 Tymczasem udanego oglądania materiałów z nadchodzącej [konferencji][1]!
 
+{{ site.mark_post_as_end }}
+
+### {{ site.comments }}
+
 [1]: https://devblogs.microsoft.com/dotnet/net-5-0-launches-at-net-conf-november-10-12/ "net 5 launches at net conf november 10-12"
 [2]: https://devblogs.microsoft.com/dotnet/f-5-update-for-august/ "f# 5 update for august/"
 [3]: https://devblogs.microsoft.com/dotnet/f-5-update-for-august/#interfaces-can-be-implemented-at-different-generic-instantiations "interfaces can be implemented at different generic instantiations"
