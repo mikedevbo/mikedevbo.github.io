@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "2020 - Co było...Co jest...Co będzie..."
+description: Nowy Rok. Nowa energia do działania. Nowe plany. Nie wiem jak u Ciebie, ale u mnie, ...
 date:   2020-01-12
 ---
 
