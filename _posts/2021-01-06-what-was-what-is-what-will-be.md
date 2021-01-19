@@ -87,7 +87,7 @@ Z tematyką testów również nic się nie zmieniło. Jak na razie w zupełnośc
 
 ### Deploy
 
-Poznawanie narzędzia [Fake][12] dało mi możliwość potrenowania pisania kodu w języku **F#**. Napisałem mechanizm wdrażania nowych wersji systemu komentarzy, którego używam na tym blogu. **Microsoft Azure**? Trochę poklikałem, ale jeszcze zostawiam temat na stanie "tyko teoria".
+Poznawanie narzędzia [Fake][12] dało mi możliwość potrenowania pisania kodu w języku **F#**. Napisałem mechanizm wdrażania nowych wersji systemu komentarzy, którego używam na tym blogu. **Microsoft Azure**? Trochę poklikałem, ale jeszcze zostawiam temat na stanie "tylko teoria".
 
 ### DDTD
 
