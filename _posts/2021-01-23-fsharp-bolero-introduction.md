@@ -13,7 +13,6 @@ Posty z tej serii:
 Programowanie Webowe. Sposób wytwarzania oprogramowania, dzięki któremu produkt może zostać uruchomiony w przeglądarce internetowej. Zagadnienie jest bardzo obszerne. Możliwości realizacji można dzielić na różne kategorie, np. ze względu na **miejsce** generowania wyniku:
 
 * Server Side - generowanie zawartości po stronie serwera, a następnie przesłanie do klienta - przeglądarki internetowej
-
 * Client Side - generowanie zawartości po stronie klienta - przeglądarce internetowej
 
 Inny podział to **sposób** generowania wyniku:
