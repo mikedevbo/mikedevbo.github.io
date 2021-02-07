@@ -8,6 +8,7 @@ date:   2021-01-23
 Posty z tej serii:
 
 * [F# Bolero - A cóż to takiego? - wprowadzenie][11]
+* [F# Bolero - A cóż to takiego? - HTML templates][13]
 * ...
 
 Programowanie Webowe. Sposób wytwarzania oprogramowania, dzięki któremu produkt może zostać uruchomiony w przeglądarce internetowej. Zagadnienie jest bardzo obszerne. Możliwości realizacji można dzielić na różne kategorie, np. ze względu na **miejsce** generowania wyniku:
@@ -251,3 +252,4 @@ W następnym artykule zobaczymy, w jaki sposób używać wyżej wymienionych **T
 [10]: https://github.com/Tarmil "Tarmil"
 [11]: {{ site.url }}{% link _posts/2021-01-23-fsharp-bolero-introduction.md %}
 [12]: https://github.com/mikedevbo/fsharp-bolero-sandbox "fsharp-bolero-sandbox"
+[13]: {{ site.url }}{% link _posts/2021-02-07-fsharp-bolero-html-templates.md %}
