@@ -9,6 +9,7 @@ Posty z tej serii:
 
 * [F# Bolero - A cóż to takiego? - wprowadzenie][4]
 * [F# Bolero - A cóż to takiego? - HTML templates][7]
+* [F# Bolero - A cóż to takiego? - view components][8]
 * ...
 
 Konstruowanie elementów UI [w kodzie F#][1]. Czy jest to dobre podejście? Kiedy pierwszy raz zobaczyłem taką możliwość, pomyślałem - *ciekawe, ale nie jestem do końca przekonany*. Z jednej strony mamy wsparcie kompilatora, który pilnuje poprawności wyniku. Z drugiej strony, każda, nawet najmniejsza zmiana wymaga re-kompilacji całości. Z trzeciej strony, dla osób, które piszą **backend**, re-kompilacja po zmianie to norma. Z czwartej strony, nie da się podzielić pracy tak, aby projektowaniem UI oraz przygotowaniem prototypu zajmowały się osoby od projektowania, a programowaniem całości zajmowały się osoby od programowania. Wszystko jest w kodzie **F#**, więc wszystko trzeba zaprogramować. Na chwilę obecną nadal podchodzę z pewną rezerwą do takiego podejścia, ale nie skreślam całkowicie.
@@ -303,3 +304,4 @@ Tak wygląda programowanie w **Bolero** z użyciem **HTML Templates**. W następ
 [5]: https://www.jetbrains.com/rider/ "Jetbrains Rider"
 [6]: https://fsbolero.io/docs/Templating#hot-reloading "F# Bolero Hot Reloading"
 [7]: {{ site.url }}{% link _posts/2021-02-07-fsharp-bolero-html-templates.md %}
+[8]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
