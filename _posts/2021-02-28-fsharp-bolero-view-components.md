@@ -10,6 +10,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - wprowadzenie][5]
 * [F# Bolero - A cóż to takiego? - HTML templates][4]
 * [F# Bolero - A cóż to takiego? - view components][6]
+* [F# Bolero - A cóż to takiego? - routing][7]
 * ...
 
 W procesie rozwijania oprogramowania czasami trzeba zatrzymać dorabianie nowych funkcjonalności, ponieważ istotne stają się kwestie wydajnościowe. System działał w akceptowalny sposób i nagle zaczął działać wolniej. W takim przypadku poszukiwane są miejsca, które sprawiają problemy. Zdarza się, że rozwiązanie dostarcza technologia, której używamy.
@@ -188,3 +189,4 @@ To tyle, jeśli chodzi o programowanie w **Bolero** z użyciem **View Components
 [4]: {{ site.url }}{% link _posts/2021-02-07-fsharp-bolero-html-templates.md %}
 [5]: {{ site.url }}{% link _posts/2021-01-23-fsharp-bolero-introduction.md %}
 [6]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
+[7]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
