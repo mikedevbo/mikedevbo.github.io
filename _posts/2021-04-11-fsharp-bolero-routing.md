@@ -120,7 +120,7 @@ let initModel =
     }
 {% endhighlight %}
 
-**Union Type** `Page` reprezentuje strony. Atrybut `EntryPoint` pozwala konstruować wzorce dla ścieżki `URL`. Przykładowo definicja `[<EndPoint "/counter/{id}">]` wymagałby podania w URL `id` licznika. W naszym przykładzie nie są wymagane żadne parametry. W takim przypadku można pominąć atrybut `EntryPoint`, alej zostawiamy go dla lepszej czytelności.
+**Union Type** `Page` reprezentuje strony. Atrybut `EntryPoint` pozwala konstruować wzorce dla ścieżki `URL`. Przykładowo definicja `[<EndPoint "/counter/{id}">]` wymagałby podania w URL `id` licznika. W naszym przykładzie nie są wymagane żadne parametry. W takim przypadku można pominąć atrybut `EntryPoint`, ale zostawiamy go dla lepszej czytelności.
 
 Główną stroną jest strona, która nie wyświetla nic (patrz screen powyżej).
 
