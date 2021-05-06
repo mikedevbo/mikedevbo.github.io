@@ -124,6 +124,24 @@ Jak znasz takie rozwiązanie dla .NET, będę wdzięczny za podzielnie się info
 
 2020-01-23 10:57 UTC
 
+---
+<p />
+
+**Anonim**
+
+Powodzenia!
+
+2021-05-06 00:30 UTC 
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+Dzięki wielkie!
+
+2021-05-06 04:08 UTC
+
 [1]: {{ site.url }}/assets/2020_was_is_will_be/what_was.svg
 [2]: {{ site.url }}/assets/2020_was_is_will_be/what_is.svg
 [3]: {{ site.url }}/assets/2020_was_is_will_be/what_will_be.svg
