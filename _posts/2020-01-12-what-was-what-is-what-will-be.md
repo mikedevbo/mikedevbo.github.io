@@ -124,6 +124,24 @@ Jak znasz takie rozwiązanie dla .NET, będę wdzięczny za podzielnie się info
 
 2020-01-23 10:57 UTC
 
+---
+<p />
+
+**Anonim**
+
+Powodzenia!
+
+2021-05-06 00:30 UTC 
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+Dzięki wielkie!
+
+2021-05-06 04:08 UTC
+
 [1]: {{ site.url }}/assets/2020_was_is_will_be/what_was.svg
 [2]: {{ site.url }}/assets/2020_was_is_will_be/what_is.svg
 [3]: {{ site.url }}/assets/2020_was_is_will_be/what_will_be.svg
@@ -139,4 +157,3 @@ Jak znasz takie rozwiązanie dla .NET, będę wdzięczny za podzielnie się info
 [13]: https://azure.microsoft.com/en-us/services/service-bus/ "azure service bus"
 [14]: https://docs.microsoft.com/en-us/azure/storage/queues/ "azure storage queues"
 [15]: https://fake.build/ "fake build"
-begin-**Anonim**-Powodzenia! -2021-05-06 00:30 UTC 
