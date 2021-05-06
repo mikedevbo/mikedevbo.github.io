@@ -199,9 +199,24 @@ Mechanizm **Routing'u** zawiera właściwość **Page Models**, która pozwala z
 
 ### {{ site.comments }}
 
+**Anonymous**
+
+Great post. Thank you :)
+
+2021-05-06 00:20 UTC
+
+---
+<p />
+
+[mikedevbo](https://ddtd.pl)
+
+Thank you very much :)
+
+2021-05-06 03:54 UTC
+
 [1]: https://fsbolero.io/docs/Routing "F# Bolero Routing"
 [2]: https://github.com/mikedevbo/fsharp-bolero-sandbox "F# Bolero Sandbox"
 [3]: {{ site.url }}{% link _posts/2021-01-23-fsharp-bolero-introduction.md %}
 [4]: {{ site.url }}{% link _posts/2021-02-07-fsharp-bolero-html-templates.md %}
 [5]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
-[6]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}begin-**Anonymous**-Great post. Thank you :)-2021-05-06 00:20 UTC 
+[6]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
