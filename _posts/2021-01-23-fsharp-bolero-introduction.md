@@ -11,6 +11,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - HTML templates][13]
 * [F# Bolero - A cóż to takiego? - view components][14]
 * [F# Bolero - A cóż to takiego? - routing][15]
+* [F# Bolero - A cóż to takiego? - routing - page models][16]
 * ...
 
 Programowanie Webowe. Sposób wytwarzania oprogramowania, dzięki któremu produkt może zostać uruchomiony w przeglądarce internetowej. Zagadnienie jest bardzo obszerne. Możliwości realizacji można dzielić na różne kategorie, np. ze względu na **miejsce** generowania wyniku:
@@ -257,3 +258,4 @@ W następnym artykule zobaczymy, w jaki sposób używać wyżej wymienionych **T
 [13]: {{ site.url }}{% link _posts/2021-02-07-fsharp-bolero-html-templates.md %}
 [14]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
 [15]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
+[16]: {{ site.url }}{% link _posts/2021-06-12-fsharp-bolero-routing-page-models.md %}
