@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][5]
 * [F# Bolero - A cóż to takiego? - routing][6]
 * [F# Bolero - A cóż to takiego? - routing - page models][7]
-* ...
+* [F# Bolero - A cóż to takiego? - routing - remoting][8]
 
 Wspólną cechą omawianych do tej pory przykładów jest to, że dane wyświetlane są na jednej stronie. W rzeczywistości systemy webowe zawierają wiele stron. Adres aktualnie przeglądanej strony pokazywany jest w pasku przeglądarki internetowej. W **Bolero** taki efekt można uzyskać, wykorzystując mechanizm o nazwie [Routing][1].
 
@@ -222,3 +222,4 @@ Thank you very much :)
 [5]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
 [6]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
 [7]: {{ site.url }}{% link _posts/2021-06-12-fsharp-bolero-routing-page-models.md %}
+[8]: {{ site.url }}{% link _posts/2021-08-18-fsharp-bolero-remoting.md %}

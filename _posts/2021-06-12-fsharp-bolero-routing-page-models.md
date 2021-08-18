@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][7]
 * [F# Bolero - A cóż to takiego? - routing][8]
 * [F# Bolero - A cóż to takiego? - routing - page models][9]
-* ...
+* [F# Bolero - A cóż to takiego? - routing - remoting][10]
 
 [Bolero][1] przetrzymuje stan, przez cały cykl życia aplikacji. Każda strona, symulowana za pomocą [Routingu][2], ma dostęp do aktualnego stanu, co jest bardzo fajną właściwością. Poniższe nagranie pokazuje, jak to działa. Obserwuj dane, wprowadzane na każdej stronie:
 
@@ -257,3 +257,4 @@ Poznane do tej pory właściwości, pozwalają programować tzw. **Frontend**. O
 [7]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
 [8]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
 [9]: {{ site.url }}{% link _posts/2021-06-12-fsharp-bolero-routing-page-models.md %}
+[10]: {{ site.url }}{% link _posts/2021-08-18-fsharp-bolero-remoting.md %}
