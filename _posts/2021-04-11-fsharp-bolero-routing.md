@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][5]
 * [F# Bolero - A cóż to takiego? - routing][6]
 * [F# Bolero - A cóż to takiego? - routing - page models][7]
-* [F# Bolero - A cóż to takiego? - routing - remoting][8]
+* [F# Bolero - A cóż to takiego? - remoting][8]
 
 Wspólną cechą omawianych do tej pory przykładów jest to, że dane wyświetlane są na jednej stronie. W rzeczywistości systemy webowe zawierają wiele stron. Adres aktualnie przeglądanej strony pokazywany jest w pasku przeglądarki internetowej. W **Bolero** taki efekt można uzyskać, wykorzystując mechanizm o nazwie [Routing][1].
 

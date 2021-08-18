@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][6]
 * [F# Bolero - A cóż to takiego? - routing][7]
 * [F# Bolero - A cóż to takiego? - routing - page models][8]
-* [F# Bolero - A cóż to takiego? - routing - remoting][9]
+* [F# Bolero - A cóż to takiego? - remoting][9]
 
 W procesie rozwijania oprogramowania czasami trzeba zatrzymać dorabianie nowych funkcjonalności, ponieważ istotne stają się kwestie wydajnościowe. System działał w akceptowalny sposób i nagle zaczął działać wolniej. W takim przypadku poszukiwane są miejsca, które sprawiają problemy. Zdarza się, że rozwiązanie dostarcza technologia, której używamy.
 

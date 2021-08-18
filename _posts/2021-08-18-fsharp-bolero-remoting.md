@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][10]
 * [F# Bolero - A cóż to takiego? - routing][11]
 * [F# Bolero - A cóż to takiego? - routing - page models][12]
-* [F# Bolero - A cóż to takiego? - routing - remoting][13]
+* [F# Bolero - A cóż to takiego? - remoting][13]
 
 Aplikacja webowa składa się (w dużym uproszczeniu) z dwóch części:
 

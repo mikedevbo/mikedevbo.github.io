@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][14]
 * [F# Bolero - A cóż to takiego? - routing][15]
 * [F# Bolero - A cóż to takiego? - routing - page models][16]
-* [F# Bolero - A cóż to takiego? - routing - remoting][17]
+* [F# Bolero - A cóż to takiego? - remoting][17]
 
 Programowanie Webowe. Sposób wytwarzania oprogramowania, dzięki któremu produkt może zostać uruchomiony w przeglądarce internetowej. Zagadnienie jest bardzo obszerne. Możliwości realizacji można dzielić na różne kategorie, np. ze względu na **miejsce** generowania wyniku:
 

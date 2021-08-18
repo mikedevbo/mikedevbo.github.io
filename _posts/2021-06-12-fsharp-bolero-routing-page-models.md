@@ -12,7 +12,7 @@ Posty z tej serii:
 * [F# Bolero - A cóż to takiego? - view components][7]
 * [F# Bolero - A cóż to takiego? - routing][8]
 * [F# Bolero - A cóż to takiego? - routing - page models][9]
-* [F# Bolero - A cóż to takiego? - routing - remoting][10]
+* [F# Bolero - A cóż to takiego? - remoting][10]
 
 [Bolero][1] przetrzymuje stan, przez cały cykl życia aplikacji. Każda strona, symulowana za pomocą [Routingu][2], ma dostęp do aktualnego stanu, co jest bardzo fajną właściwością. Poniższe nagranie pokazuje, jak to działa. Obserwuj dane, wprowadzane na każdej stronie:
 
