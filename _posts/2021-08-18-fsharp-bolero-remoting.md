@@ -278,4 +278,4 @@ Kolejnym etapem rozwoju jest wymyślenie tematu na aplikację oraz jej realizacj
 [10]: {{ site.url }}{% link _posts/2021-02-28-fsharp-bolero-view-components.md %}
 [11]: {{ site.url }}{% link _posts/2021-04-11-fsharp-bolero-routing.md %}
 [12]: {{ site.url }}{% link _posts/2021-06-12-fsharp-bolero-routing-page-models.md %}
-[13]: {{ site.url }}{% link _posts/2021-08-18-fsharp-bolero-remoting.md %}
+[13]: {{ site.url }}{% link _posts/2021-08-18-fsharp-bolero-remoting.md %}begin-**test_user**-test_comment-2021-10-17 06:33 UTC 
