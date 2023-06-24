@@ -23,7 +23,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mikedevbo
 github_username:  mikedevbo
 mark_post_as_end: =
-comments: Komentarze
+comments: "&nbsp;" # Komentarze
 
 # Build settings
 markdown: kramdown
